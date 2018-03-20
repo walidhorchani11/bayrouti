@@ -1,0 +1,11 @@
+ecommerce_admin_product:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_admin_product.yml"
+    prefix:   /admin/product
+
+ecommerce_product:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_product.yml"
+    prefix: /product
+
+ecommerce_comment:
+   resource: "@EcommerceBundle/Resources/config/routing/routing_comment.yml"
+   prefix: /comment
