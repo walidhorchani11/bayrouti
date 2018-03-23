@@ -1,0 +1,4 @@
+panier_add:
+    path:     /add
+    defaults: { _controller: "EcommerceBundle:Panier:add" }
+    methods: POST

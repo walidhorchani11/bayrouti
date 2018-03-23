@@ -9,3 +9,7 @@ ecommerce_product:
 ecommerce_comment:
    resource: "@EcommerceBundle/Resources/config/routing/routing_comment.yml"
    prefix: /comment
+
+ecommerce_panier:
+   resource: "@EcommerceBundle/Resources/config/routing/routing_panier.yml"
+   prefix: /panier

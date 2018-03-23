@@ -12,16 +12,41 @@
         <p>{{ product.description }}</p>
         {{ product.price }}<br>
         {#<img src="{{ product.images.webPath }}" alt="">#}
-        <button class="btn btn-default">ajouter au Panier<i></i></button>
-        <a href="{{ path('comment_new', {'id': product.id }) }}">
-            <button>commenter ce produit</button>
-        </a>
-        <a href="{{ path('product_show', {'id': product.id }) }}">
-            <button>show</button>
+        <button class="btn btn-default" onclick=" addToPanier({{ product.id }}) ">
+            ajouter au Panier<i></i></button>
+
+        <a href="{{ path('product_show', {'id': product.id }) }}" name="lienDetailProduct">
+            <button class="btn btn-default">Details</button>
         </a>
 
         {% if not loop.last %}
             <hr>
         {% endif %}
     {% endfor %}
+    <p id="demo">hhhhh</p>
+    <script>
+        var inPanier = [];
+        function addToPanier(id) {
+
+            inPanier.push(id);
+            //return inPanier;
+
+            document.getElementById("demo").innerHTML = inPanier;
+
+            detailProduct = document.getElementsByName('lienDetailProduct');
+            var i;
+            for (i = 0; i < detailProduct.length; i++) {
+
+                detailProduct[i].setAttribute('href', detailProduct[i].href + '?' + inPanier);
+                console.log(detailProduct[i].href);
+            }
+            //console.log(detailProduct.length)
+        }
+        //console.log(inPanier);
+
+
+    </script>
+
+
 {% endblock %}
+

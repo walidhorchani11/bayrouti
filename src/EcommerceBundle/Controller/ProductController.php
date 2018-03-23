@@ -30,12 +30,12 @@ class ProductController extends Controller
 
         $product = $this->getDoctrine()->getManager()->getRepository('EcommerceBundle:Product')->getProductComment($id);
 
-        // serialisatioin d'objet en json (linearisatioon)
+        /*// serialisatioin d'objet en json (linearisatioon)
         $data = $this->get('jms_serializer')->serialize($product, 'json');
-        return new Response($data,'200', array('content-type' => 'application/json'));
+        return new Response($data,'200', array('content-type' => 'application/json'));*/
 
 
-        //return $this->render('EcommerceBundle:Product:show.html.twig', array('product' => $product));
+        return $this->render('EcommerceBundle:Product:show.html.twig', array('product' => $product));
     }
 
 

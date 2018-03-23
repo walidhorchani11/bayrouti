@@ -2,102 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96e8ba-b441-4cfb-a5ad-06de237a955d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/594e453.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/594e453_bootstrap.min_3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/594e453_clean-blog.min_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/594e453_font-awesome.min_2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/7875da2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/7875da2_bootstrap.min_2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/7875da2_clean-blog.min_1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/7875da2_jquery.min_4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/7875da2_popper.min_3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Entity/Media.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Repository/MediaRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.~twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base_Admin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/clean-blog.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/clean-blog.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/clean-blog.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/clean-blog.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/public/js/collectionImage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/contact_me.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/e91d138.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/e91d138_bootstrap.min_3.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/e91d138_clean-blog.min_1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/e91d138_font-awesome.min_2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/module_Used/footer.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/module_Used/header.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/jqBootstrapValidation.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/jquery/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/module_Used/nav_bar.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/popper/popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/popper/popper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_comment.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_product.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/screen-reader.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Comment/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font-awesome/less/variables.less" />
-      <change type="DELETED" beforePath="C:\wamp\www\atelier3\app\cache\.gitkeep" afterPath="" />
-      <change type="MOVED" beforePath="C:\wamp\www\atelier3\app\logs\.gitkeep" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/atelier3.iml" afterPath="$PROJECT_DIR$/.idea/atelier3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Controller/PanierController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="atelier3.iws" />
@@ -120,12 +29,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6420863">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state vertical-scroll-proportion="-7.2">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.513308">
+              <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#66#95#0#Twig" expanded="true" />
+                <element signature="e#633#645#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PanierController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/PanierController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+              <folding>
+                <element signature="e#46#103#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,16 +82,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing_product.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_product.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -176,15 +113,12 @@
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Entity/Media.php" />
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Comment/new.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Comment/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_comment.yml" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Controller/CommentController.php" />
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Repository/ProductRepository.php" />
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Entity/Comment.php" />
         <option value="$PROJECT_DIR$/src/Listener/Compteur_commentListener.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml" />
@@ -194,7 +128,12 @@
         <option value="$PROJECT_DIR$/app/config/config_dev.yml" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_product.yml" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_panier.yml" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Controller/PanierController.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
       </list>
     </option>
   </component>
@@ -376,7 +315,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcommerceBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,11 +341,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Resources\views\Comment" />
       <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Resources\config\routing" />
+      <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Controller" />
+      <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Resources\views\Comment" />
       <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Resources" />
       <recent name="C:\wamp\www\atelier3\src\EcommerceBundle\Entity" />
-      <recent name="C:\wamp\www\atelier3\web\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\atelier3\src\EcommerceBundle" />
@@ -450,14 +397,14 @@
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24051593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24810319" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20257966" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93322474" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93311584" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -508,20 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.097297296">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.~twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -673,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="63" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.466666">
@@ -722,13 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Comment/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -740,13 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -812,15 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2774775">
           <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_product.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -867,11 +770,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="63" selection-start-line="7" selection-start-column="63" selection-end-line="7" selection-end-column="63" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_product.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/routing/routing_panier.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/PanierController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <folding>
+            <element signature="e#46#103#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6420863">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state vertical-scroll-proportion="-7.2">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.513308">
+          <caret line="39" column="94" selection-start-line="39" selection-start-column="94" selection-end-line="39" selection-end-column="94" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#66#95#0#Twig" expanded="true" />
+            <element signature="e#633#645#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

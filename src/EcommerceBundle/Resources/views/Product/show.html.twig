@@ -5,7 +5,7 @@
     {{ product.name }}
     <br>
     {% for comment in product.comments %}
-        {{ comment.content }} -
+        {{ comment.content }} {% if not loop.last %} - {% endif %}
     {% endfor %}
 
 {% endblock %}
