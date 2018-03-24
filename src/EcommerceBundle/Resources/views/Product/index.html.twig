@@ -16,7 +16,7 @@
             ajouter au Panier<i></i></button>
 
         <a href="{{ path('product_show', {'id': product.id }) }}" name="lienDetailProduct">
-            <button class="btn btn-default">Details</button>
+            <button class="btn btn-default" onclick="changeUrl(this)">Details</button>
         </a>
 
         {% if not loop.last %}
@@ -25,24 +25,35 @@
     {% endfor %}
     <p id="demo">hhhhh</p>
     <script>
+
         var inPanier = [];
         function addToPanier(id) {
 
             inPanier.push(id);
-            //return inPanier;
 
-            document.getElementById("demo").innerHTML = inPanier;
-
-            detailProduct = document.getElementsByName('lienDetailProduct');
-            var i;
-            for (i = 0; i < detailProduct.length; i++) {
-
-                detailProduct[i].setAttribute('href', detailProduct[i].href + '?' + inPanier);
-                console.log(detailProduct[i].href);
-            }
-            //console.log(detailProduct.length)
         }
-        //console.log(inPanier);
+
+        function changeUrl(element) {
+
+            /*detailProduct = document.getElementsByName('lienDetailProduct');
+             var i;
+             for (i = 0; i < detailProduct.length; i++) {
+
+             detailProduct[i].setAttribute('href', detailProduct[i].href + '?' + inPanier);
+             console.log(detailProduct[i].href);
+             }
+             */
+            var lien = element.parentNode;
+
+
+
+            if (inPanier.length != 0)
+                lien.setAttribute('href', lien.getAttribute('href') + '?' + inPanier.join('&'));
+
+            console.log(lien.getAttribute('href'));
+
+
+        }
 
 
     </script>
