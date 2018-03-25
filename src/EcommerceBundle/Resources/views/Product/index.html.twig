@@ -24,6 +24,9 @@
         {% endif %}
     {% endfor %}
     <p id="demo">hhhhh</p>
+
+    {#peitit comment #}
+
     <script>
 
         var inPanier = [];
@@ -31,33 +34,35 @@
 
             inPanier.push(id);
 
+            addMenuPanier();
+
+        }
+
+        function addMenuPanier() {
+
+            if (inPanier.length > 0) {
+                var menu = document.createElement("button");
+                menu.innerHTML= "acceder au panier";
+
+                document.getElementById("demo").appendChild(menu);
+
+
+            }
+
         }
 
         function changeUrl(element) {
 
-            /*detailProduct = document.getElementsByName('lienDetailProduct');
-             var i;
-             for (i = 0; i < detailProduct.length; i++) {
-
-             detailProduct[i].setAttribute('href', detailProduct[i].href + '?' + inPanier);
-             console.log(detailProduct[i].href);
-             }
-             */
             var lien = element.parentNode;
-
-
 
             if (inPanier.length != 0)
                 lien.setAttribute('href', lien.getAttribute('href') + '?' + inPanier.join('&'));
 
             console.log(lien.getAttribute('href'));
 
-
         }
 
 
     </script>
 
-
 {% endblock %}
-
