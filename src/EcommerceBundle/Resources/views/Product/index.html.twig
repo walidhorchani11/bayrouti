@@ -1,9 +1,11 @@
 {% extends "base.html.twig" %}
+
 {% block header %}
     {% include ":module_Used:header.html.twig" with {'url': asset('image/4.jpg'),
     'titre':'our product',
     'description': 'among our service we can provide you by our product'
     } %}
+
 {% endblock %}
 {% block body %}
     {% for product in products %}
@@ -12,12 +14,18 @@
         <p>{{ product.description }}</p>
         {{ product.price }}<br>
         {#<img src="{{ product.images.webPath }}" alt="">#}
-        <button class="btn btn-default" onclick=" addToPanier({{ product.id }}) ">
+        {#
+                <button class="btn btn-default" onclick=" addToPanier({{ product.id }}) ">
+                    ajouter au Panier<i></i></button>
+        #}
+
+        <button class="btn btn-default addPanier" value="{{ product.id }}">
             ajouter au Panier<i></i></button>
 
-        <a href="{{ path('product_show', {'id': product.id }) }}" name="lienDetailProduct">
-            <button class="btn btn-default" onclick="changeUrl(this)">Details</button>
-        </a>
+
+        {#  <a href="{{ path('product_show', {'id': product.id }) }}" name="lienDetailProduct">
+              <button class="btn btn-default bouton_add" onclick="changeUrl(this)">Details</button>
+          </a>#}
 
         {% if not loop.last %}
             <hr>
@@ -28,41 +36,62 @@
     {#peitit comment #}
 
     <script>
+        $(document).ready(function () {
 
-        var inPanier = [];
-        function addToPanier(id) {
+            $(".addPanier").click(function () {
 
-            inPanier.push(id);
+                var idProduct = $(this).attr('value');
 
-            addMenuPanier();
+                $.get('http://localhost/atelier3/web/app_dev.php/panier/add?id=' + idProduct+'&'+'qte='+1, function (data, status) {
 
-        }
+                    $("#demo").text(data);
 
-        function addMenuPanier() {
+                });
 
-            if (inPanier.length > 0) {
-                var menu = document.createElement("button");
-                menu.innerHTML= "acceder au panier";
+            });
 
-                document.getElementById("demo").appendChild(menu);
+        });
 
+    </script>
+
+    {#
+        <script>
+
+            var inPanier = [];
+            function addToPanier(id) {
+
+                inPanier.push(id);
+
+                addMenuPanier();
 
             }
 
-        }
+            function addMenuPanier() {
 
-        function changeUrl(element) {
+                if (inPanier.length > 0) {
+                    var menu = document.createElement("button");
+                    menu.innerHTML= "acceder au panier";
 
-            var lien = element.parentNode;
-
-            if (inPanier.length != 0)
-                lien.setAttribute('href', lien.getAttribute('href') + '?' + inPanier.join('&'));
-
-            console.log(lien.getAttribute('href'));
-
-        }
+                    document.getElementById("demo").appendChild(menu);
 
 
-    </script>
+                }
+
+            }
+
+            function changeUrl(element) {
+
+                var lien = element.parentNode;
+
+                if (inPanier.length != 0)
+                    lien.setAttribute('href', lien.getAttribute('href') + '?' + inPanier.join('&'));
+
+                console.log(lien.getAttribute('href'));
+
+            }
+
+
+        </script>
+    #}
 
 {% endblock %}
