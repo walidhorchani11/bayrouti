@@ -27,4 +27,18 @@ class ProductRepository extends EntityRepository
     }
 
 
+    public function getProductPanier($array)
+    {
+        $qb = $this->createQueryBuilder('p');
+        $qb->where('p.id IN (:array)')
+            ->setParameter('array', $array);
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+
+    }
+
+
+
 }
