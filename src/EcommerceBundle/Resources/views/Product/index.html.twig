@@ -1,3 +1,5 @@
+{% set sessionPanier = app.session.get('panier') %}
+
 {% extends "base.html.twig" %}
 
 {% block header %}
@@ -8,90 +10,42 @@
 
 {% endblock %}
 {% block body %}
+
     {% for product in products %}
 
         <h2>{{ product.name }}</h2>
         <p>{{ product.description }}</p>
         {{ product.price }}<br>
-        {#<img src="{{ product.images.webPath }}" alt="">#}
-        {#
-                <button class="btn btn-default" onclick=" addToPanier({{ product.id }}) ">
-                    ajouter au Panier<i></i></button>
-        #}
 
-        <button class="btn btn-default addPanier" value="{{ product.id }}">
-            ajouter au Panier<i></i></button>
+        {% set rem = 0 %}
 
+        {#on va parcourir le tableau pour verifier si le produit existe dans le panier#}
+        {% for key, value in sessionPanier %}
+            {#si ce produit existe dans le panier  on assigne au variable rem recoit 1#}
+            {% if key == product.id %}
+                {% set rem = 1 %}
 
-        {#  <a href="{{ path('product_show', {'id': product.id }) }}" name="lienDetailProduct">
-              <button class="btn btn-default bouton_add" onclick="changeUrl(this)">Details</button>
-          </a>#}
+            {% endif %}
+
+        {% endfor %}
+
+        {#si le variable rem = 1 cad que le produit existe dans le panier
+         et on va mettre un boutton pour retirer ce product#}
+        <button class="btn btn-default buttonAddDelete" value="{{ product.id }}" name= {% if rem == 1 %} "delete" {% else %} "add" {% endif %}>
+            {% if rem == 1 %}Retirer{% else %} Add {% endif %}<i></i></button>
 
         {% if not loop.last %}
             <hr>
         {% endif %}
     {% endfor %}
     <p id="demo">hhhhh</p>
-
-    {#peitit comment #}
-
-    <script>
-        $(document).ready(function () {
-
-            $(".addPanier").click(function () {
-
-                var idProduct = $(this).attr('value');
-
-                $.get('http://localhost/atelier3/web/app_dev.php/panier/add?id=' + idProduct+'&'+'qte='+1, function (data, status) {
-
-                    $("#demo").text(data);
-
-                });
-
-            });
-
-        });
-
-    </script>
-
-    {#
-        <script>
-
-            var inPanier = [];
-            function addToPanier(id) {
-
-                inPanier.push(id);
-
-                addMenuPanier();
-
-            }
-
-            function addMenuPanier() {
-
-                if (inPanier.length > 0) {
-                    var menu = document.createElement("button");
-                    menu.innerHTML= "acceder au panier";
-
-                    document.getElementById("demo").appendChild(menu);
-
-
-                }
-
-            }
-
-            function changeUrl(element) {
-
-                var lien = element.parentNode;
-
-                if (inPanier.length != 0)
-                    lien.setAttribute('href', lien.getAttribute('href') + '?' + inPanier.join('&'));
-
-                console.log(lien.getAttribute('href'));
-
-            }
-
-
-        </script>
-    #}
-
+    {% if app.session.has('panier') %}
+        <a href="{{ path('panier_show') }}">
+            <button>Panier</button>
+        </a>
+    {% endif %}
 {% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/ecommerce/js/addRemoveButton_productPanier.js') }}"></script>
+{% endblock %}
+
