@@ -1,4 +1,12 @@
 panier_add:
     path:     /add
     defaults: { _controller: "EcommerceBundle:Panier:add" }
-    methods: POST
+
+panier_show:
+    path:    /show
+    defaults: { _controller: "EcommerceBundle:Panier:show" }
+
+panier_delete:
+    path:     /delete
+    defaults: { _controller: "EcommerceBundle:Panier:delete" }
+

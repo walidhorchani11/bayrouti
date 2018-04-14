@@ -24,7 +24,6 @@
             {#si ce produit existe dans le panier  on assigne au variable rem recoit 1#}
             {% if key == product.id %}
                 {% set rem = 1 %}
-
             {% endif %}
 
         {% endfor %}
@@ -34,18 +33,18 @@
         <button class="btn btn-default buttonAddDelete" value="{{ product.id }}" name= {% if rem == 1 %} "delete" {% else %} "add" {% endif %}>
             {% if rem == 1 %}Retirer{% else %} Add {% endif %}<i></i></button>
 
-        {% if not loop.last %}
             <hr>
-        {% endif %}
+
     {% endfor %}
-    <p id="demo">hhhhh</p>
+<br>
     {% if app.session.has('panier') %}
         <a href="{{ path('panier_show') }}">
-            <button>Panier</button>
+            <button class="btn btn-outline-success">Panier</button>
         </a>
     {% endif %}
+
 {% endblock %}
+
 {% block javascripts %}
     <script src="{{ asset('bundles/ecommerce/js/addRemoveButton_productPanier.js') }}"></script>
 {% endblock %}
-

@@ -33,7 +33,7 @@ class PanierController extends Controller
 
         } else {
             unset($panier[$idProd]);
-            echo "product exixst on va le supprimer";
+            //echo "product exixst on va le supprimer";
         }
 
         //mise a jour de la session
@@ -77,6 +77,19 @@ class PanierController extends Controller
         $response = new JsonResponse($qte);
         $response->headers->set('content-type', 'application/json');
         return $response;*/
+
+    }
+
+    public function deleteAction(Request $request)
+    {
+
+        $idProd = $request->query->get('idProd');
+        $session = $this->get('session');
+        $panier = $session->get('panier');
+        unset($panier[$idProd]);
+        $session->set('panier', $panier);
+
+        die;
 
     }
 
