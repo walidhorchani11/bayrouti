@@ -1,5 +1,21 @@
 //appele dans le fichier panier_show
 $(document).ready(function () {
+
+    $(".update_qte").change(function () {
+
+        var qte = $(this).val();
+        var idProd = $(this).attr('id');
+        console.log(idProd);
+        console.log(qte);
+
+        $.get('http://localhost/atelier3/web/app_dev.php/panier/update?idProd=' + idProd + '&qte=' + qte, function () {
+            console.log('qte modifier avec success')
+        });
+
+    });
+
+
+    //**************************************wawa
     var tr_tbody = $("tbody > tr").length;
     $(".lien_retirer").click(function () {
         var idProd = $(this).attr('id');

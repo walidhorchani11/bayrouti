@@ -1,0 +1,72 @@
+{% extends '::base.html.twig' %}
+{% block header %}
+    {% include 'module_Used/header.html.twig' with {'url': asset('image/5.jpg'),
+    'titre': 'votre Panier en attente',
+    'description': 'among our service we can provide you by our product'
+    } %}
+{% endblock %}
+
+{% block body %}
+
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantité</th>
+            <th>Prix unitaire</th>
+            <th>Total HT</th>
+            <th>delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if listProduct|length == 0 %}
+            <tr>
+                <td colspan="5" class="text-center">
+                    <span>votre panier est vide</span>
+                </td>
+            </tr>
+        {% else %}
+            {% for product in listProduct %}
+                <tr>
+                    <td>
+                        {{ product.name }}
+                    </td>
+                    <td>
+                        <select id="{{ product.id }}" class="update_qte">
+                            {% for i in 1..20 %}
+                                <option value="{{ i }}" {% if i == panier[product.id] %}selected{% endif %}>
+                                    {{ i }}
+                                </option>
+                            {% endfor %}
+                        </select>
+
+                        {#<input class="update_qte" type="number"
+                               placeholder="{{ app.session.get('panier')[product.id] }}">
+            #}
+                    </td>
+                    <td>
+                        {{ product.price }}
+                    </td>
+                    <td>
+                        {{ product.price }} * {{ app.session.get('panier')[product.id] }}
+                    </td>
+                    <td>
+                        <span id="{{ product.id }}" class="lien_retirer"><i class="icon-trash">retirer</i></span>
+                    </td>
+                </tr>
+            {% endfor %}
+
+        {% endif %}
+        </tbody>
+    </table>
+    <a href="{{ path('product_index') }}">
+        <button class="btn btn-primary ">Ajouter Produit</button>
+    </a>
+    {% if listProduct|length > 0 %}
+        <button id="btn_valider" class="btn btn-primary ">Validez Panier</button>
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/ecommerce/js/panier_show.js') }}"></script>
+{% endblock %}

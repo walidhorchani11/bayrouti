@@ -10,3 +10,7 @@ panier_delete:
     path:     /delete
     defaults: { _controller: "EcommerceBundle:Panier:delete" }
 
+panier_update:
+    path:     /update
+    defaults: { _controller: "EcommerceBundle:Panier:update" }
+

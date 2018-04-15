@@ -102,8 +102,21 @@ class PanierController extends Controller
         $em = $this->getDoctrine()->getManager();
         $listProduct = $em->getRepository('EcommerceBundle:Product')->getProductPanier(array_keys($panier));
 
-        return $this->render('EcommerceBundle:Panier:show.html.twig', array('listProduct' => $listProduct));
+        return $this->render('EcommerceBundle:Panier:show.html.twig', array('listProduct' => $listProduct, 'panier' => $panier));
 
+
+    }
+
+    //methode appele en ajax pour modifier la quantite du produit
+    public function updateAction(Request $request)
+    {
+        $idProd = $request->query->get('idProd');
+        $qte = $request->query->get('qte');
+        $session = $this->get('session');
+        $panier = $session->get('panier');
+        $panier[$idProd] = $qte;
+        $session->set('panier', $panier);
+        die;
 
     }
 
