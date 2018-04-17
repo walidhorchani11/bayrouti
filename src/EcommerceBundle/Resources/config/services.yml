@@ -1,5 +1,7 @@
 parameters:
     class.compteur: EcommerceBundle\Listener\Compteur_commentListener
+    class.calcul.cout.product: EcommerceBundle\Service\CalculSomme
+    class.calcul_cout.product_twig.extension: EcommerceBundle\Service\CalculSommeExtensionTwig
 
 
 services:
@@ -11,4 +13,16 @@ services:
         class: '%class.compteur%'
         tags:
             - { name: doctrine.event_listener , event: postPersist }
+
+
+    ecommerce.cout.product.service:
+        class: '%class.calcul.cout.product%'
+        arguments: ["@session", "@doctrine.orm.entity_manager"]
+
+
+    ecommerce.cout.product_twig_extension.service:
+        class: '%class.calcul_cout.product_twig.extension%'
+        arguments: ['@ecommerce.cout.product.service']
+        tags:
+            - { name: twig.extension }
 
