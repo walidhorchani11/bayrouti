@@ -3,10 +3,6 @@ product_index:
     defaults: { _controller: "EcommerceBundle:Product:index" }
     methods: GET
 
-product_show:
-    path:     /show/{id}
-    defaults: { _controller: "EcommerceBundle:Product:show" }
-    methods: GET
 
 create_product_test:
     path:    /create

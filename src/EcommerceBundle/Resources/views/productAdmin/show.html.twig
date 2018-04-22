@@ -37,11 +37,4 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
-
-    <h3>Images Liees</h3>
-    {% for image in product.images %}
-        <img src="{{ image.webPath }}">
-    {% endfor %}
-    {#<img src="{{ product.image.webPath }}">#}
-
 {% endblock %}

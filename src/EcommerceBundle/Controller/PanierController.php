@@ -3,6 +3,7 @@
 namespace EcommerceBundle\Controller;
 
 use EcommerceBundle\Entity\CmdProd;
+use EcommerceBundle\Entity\Command;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +18,6 @@ class PanierController extends Controller
         //on test si on a pas session 'panier' on va le crer
         if (!$session->has('panier'))
             $session->set('panier', array());
-
 
         $panier = $session->get('panier');
 
@@ -42,42 +42,6 @@ class PanierController extends Controller
         var_dump($panier);
         die;
 
-        //return;
-
-        //$cmdProd = new CmdProd();
-
-        /* $idProd = $request->query->get('id');
-         $qte = $request->query->get('qte');
-         $em = $this->getDoctrine()->getManager();
-         $product = $em->getRepository('EcommerceBundle:Product')->findOneBy(array('id' => $idProd));*/
-
-        /* $cmdProd->setProduct($product);
-         $cm
-        dProd->setQte($qte);*/
-
-        //on ajout au session panier cette commnade du produit et sa qte mais la creation
-        //du commande pour laffecter a cmdProd ne se fait qu au stade du persist ca validation
-        //du panier
-
-
-        //array_push($panier, $cmdProd);
-
-        /* $data = $this->get('jms_serializer')->serialize($product,'json');
-
-         $response = new Response($data);
-         $response->headers->set('content-type', 'application/json');
-         return $response;*/
-
-        /*$idProd = $request->query->get('id');
-        $qte = $request->query->get('qte');
-        $em = $this->getDoctrine()->getManager();
-        $product = $em->getRepository('EcommerceBundle:Product')->findOneBy(array('id' => $idProd));
-        $data = $product->getName();
-
-        $response = new JsonResponse($qte);
-        $response->headers->set('content-type', 'application/json');
-        return $response;*/
-
     }
 
     public function deleteAction(Request $request)
@@ -93,7 +57,7 @@ class PanierController extends Controller
 
     }
 
-    public function showAction(Request $request)
+    public function showAction()
     {
 
         $session = $this->get('session');
@@ -103,7 +67,6 @@ class PanierController extends Controller
         $listProduct = $em->getRepository('EcommerceBundle:Product')->getProductPanier(array_keys($panier));
 
         return $this->render('EcommerceBundle:Panier:show.html.twig', array('listProduct' => $listProduct, 'panier' => $panier));
-
 
     }
 
@@ -118,6 +81,68 @@ class PanierController extends Controller
         $session->set('panier', $panier);
         die;
 
+    }
+
+
+    public function validerAction(Request $request)
+    {
+
+        //recuperre la session panier
+        $session = $this->get('session');
+        $panierProduct = $session->get('panier');
+        $cmd = new Command();
+
+        $em = $this->getDoctrine()->getManager();
+        $rep = $em->getRepository('EcommerceBundle:Product');
+        $em->persist($cmd);
+
+        foreach ($panierProduct as $key => $singleProduct) {
+            $cmdProd = new CmdProd();
+            $cmdProd->setCommande($cmd);
+
+            $product = $rep->find($key);
+            $cmdProd->setProduct($product);
+
+            $cmdProd->setQte($singleProduct);
+            $em->persist($cmdProd);
+
+        }
+//TODO :ajout d flash bag msg
+        $em->flush();
+        $session->remove('panier');
+
+
+        return $this->redirectToRoute('product_index');
+
+
+        //num tel pour lajouter a msg envoye a admin pour conatcter le client
+        // $tel  = $request->request->get('tel');
+
+        /*  $message =  \Swift_Message::newInstance()
+              ->setFrom('walidhorchani11@gmail.com')
+              ->setTo('walidhorchani11@gmail.com')
+              ->setBody(
+                  $this->renderView(
+                  // app/Resources/views/Emails/registration.html.twig
+                      '@Ecommerce/Comment/new.html.twig'
+                  ),
+                  'text/html'
+              )*/
+        /*
+          If you also want to include a plaintext version of the message
+        ->addPart(
+            $this->renderView(
+                'Emails/registration.txt.twig',
+                array('name' => $name)
+            ),
+            'text/plain'
+        )
+
+    ;*/
+
+        /* $this->get('mailer')->send($message);
+
+         return $this->redirectToRoute('product_index');*/
     }
 
 }

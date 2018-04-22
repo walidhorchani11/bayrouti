@@ -3,6 +3,7 @@
 namespace EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Product
@@ -22,10 +23,12 @@ class Product
     private $id;
 
     /**
-     * @ORM\OneToMany(targetEntity="EcommerceBundle\Entity\Media", cascade={"persist","remove"}, mappedBy="product")
-     * @ORM\JoinColumn(nullable= false)
+     * @ORM\Column(name="image", type="string")
+     *
+     * @Assert\NotBlank()
+     * @Assert\File()
      */
-    private $images;
+    private $image;
 
 
     /**
@@ -148,42 +151,8 @@ class Product
      */
     public function __construct()
     {
-        $this->images = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
-    /**
-     * Add image
-     *
-     * @param \EcommerceBundle\Entity\Media $image
-     * @return Product
-     */
-    public function addImage(\EcommerceBundle\Entity\Media $image)
-    {
-        $this->images[] = $image;
-        $image->setProduct($this);
-
-        return $this;
-    }
-
-    /**
-     * Remove image
-     *
-     * @param \EcommerceBundle\Entity\Media $image
-     */
-    public function removeImage(\EcommerceBundle\Entity\Media $image)
-    {
-        $this->images->removeElement($image);
-    }
-
-    /**
-     * Get images
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getImages()
-    {
-        return $this->images;
-    }
 
     /**
      * Add comment
@@ -240,5 +209,45 @@ class Product
     public function getNbrComment()
     {
         return $this->nbrComment;
+    }
+
+
+    public function compteTVA()
+    {
+        if ($this->price < 0) {
+            throw new \LogicException('la valeur du price ne peut pa etre nul');
+        }
+
+        if ($this->name == 'food') {
+            return $this->price * 0.001;
+        }
+
+        return $this->price * 0.5;
+
+    }
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Product
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

@@ -14,3 +14,7 @@ panier_update:
     path:     /update
     defaults: { _controller: "EcommerceBundle:Panier:update" }
 
+panier_valider:
+    path:     /valider
+    defaults: { _controller: "EcommerceBundle:Panier:valider" }
+

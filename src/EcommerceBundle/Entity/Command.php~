@@ -40,11 +40,6 @@ class Command
     }
 
 
-    /**
-     * @ORM\ManyToMany(targetEntity="EcommerceBundle\Entity\Product")
-     */
-    private $products;
-
 
     /**
      * Set date
@@ -68,4 +63,14 @@ class Command
     {
         return $this->date;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->setDate(new \DateTime());
+
+    }
+
+
 }

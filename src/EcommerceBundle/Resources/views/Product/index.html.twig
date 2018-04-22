@@ -12,37 +12,50 @@
 {% block body %}
 
     {% for product in products %}
+        <div class="row">
 
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.description }}</p>
-        {{ product.price }}<br>
+            <div class="col-sm-6{# {% if loop.index is even %}pull-right{% else %}{% endif %}#}">
+                <img src="{{ asset('uploads/brochures/'~product.image) }}"
+                     class=" img-responsive {#{% if loop.index is even %}pull-right {% else %}pull-left{% endif %} col-5#}">
+            </div>
 
-        {% set rem = 0 %}
+            <div class="col-sm-6">
+                <h2>{{ product.name }}</h2>
 
-        {#on va parcourir le tableau pour verifier si le produit existe dans le panier#}
-        {% for key, value in sessionPanier %}
-            {#si ce produit existe dans le panier  on assigne au variable rem recoit 1#}
-            {% if key == product.id %}
-                {% set rem = 1 %}
-            {% endif %}
+                <p>{{ product.description }}</p>
+                {{ product.price }}<br>
 
-        {% endfor %}
+                {% set rem = 0 %}
 
-        {#si le variable rem = 1 cad que le produit existe dans le panier
-         et on va mettre un boutton pour retirer ce product#}
-        <button class="btn btn-default buttonAddDelete" value="{{ product.id }}" name= {% if rem == 1 %} "delete" {% else %} "add" {% endif %}>
-            {% if rem == 1 %}Retirer{% else %} Add {% endif %}<i></i></button>
+                {#on va parcourir le tableau pour verifier si le produit existe dans le panier#}
+                {% for key, value in sessionPanier %}
+                    {#si ce produit existe dans le panier  on assigne au variable rem recoit 1#}
+                    {% if key == product.id %}
+                        {% set rem = 1 %}
+                    {% endif %}
 
-            <hr>
+                {% endfor %}
 
+                {#si le variable rem = 1 cad que le produit existe dans le panier
+                 et on va mettre un boutton pour retirer ce product#}
+                <button class="btn btn-default buttonAddDelete" value="{{ product.id }}"
+                        name= {% if rem == 1 %} "delete" {% else %} "add" {% endif %}>
+                {% if rem == 1 %}Retirer{% else %} Add {% endif %}<i></i></button>
+            </div>
+
+        </div>
+        <hr>
     {% endfor %}
-<br>
-    {% if app.session.has('panier') %}
-        <a href="{{ path('panier_show') }}">
-            <button class="btn btn-outline-success">Panier</button>
-        </a>
-    {% endif %}
+    <br>
 
+
+    <div id="idPanier" {% if not app.session.has('panier') %} style="display: none" {% endif %}>
+
+        <a href="{{ path('panier_show') }}">
+            <button class="btn btn-outline-success ">Panier</button>
+        </a>
+
+    </div>
 {% endblock %}
 
 {% block javascripts %}

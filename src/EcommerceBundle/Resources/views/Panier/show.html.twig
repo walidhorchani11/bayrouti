@@ -64,8 +64,35 @@
         <button class="btn btn-primary ">Ajouter Produit</button>
     </a>
     {% if listProduct|length > 0 %}
-        <button id="btn_valider" class="btn btn-primary ">Validez Panier</button>
+        <a href="#tel" class="btn btn-primary " data-toggle="modal">Validez Panier</a>
     {% endif %}
+    {#
+    ajout modal pour ajout de tel "confirmation de la commande via tel"
+    #}
+    {# TODO mise en form modal  & validation de l'input tel#}
+    <div class="modal fade" id="tel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <span class="modal-title">confirmation de votre commande par telephone : </span>
+                </div>
+                <form action="{{ path('panier_valider') }}" method="post">
+                    <div class="modal-body">
+                        <input type="tel" placeholder="entrez votre numero : " name="num">
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" value="Passe" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    {#fin ajout moda - note- ajout on utilisant le plugin installer sur phpstorm 'bootstrap live' cmd: bts- modal#}
 
     <div class="pull-right text-info"> {{ 'TOTAL : ' }}<span id="totalpanier">{{ calculCoutPanier() }}</span></div>
 

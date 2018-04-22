@@ -1,5 +1,7 @@
+//ce fichier est appele dans le fichier index de product
 $(document).ready(function () {
 
+    var panier = false;
     $(".buttonAddDelete").click(function () {
 
         //on recupere le id du produit pour le passaer au servuer on utilisant ajax
@@ -18,8 +20,16 @@ $(document).ready(function () {
 
         //a supprimer les param non utilises
         $.get('http://localhost/atelier3/web/app_dev.php/panier/add?id=' + idProduct + '&' + 'qte=' + 1, function (data, status) {
-
-            $("#demo").text(data);
+            afficheBtnPanier();
         });
     });
+
+
+    function afficheBtnPanier() {
+        if (panier == false) {
+            $('#idPanier').show();
+            panier = true;
+        }
+
+    }
 });

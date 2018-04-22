@@ -40,11 +40,6 @@ class Command
     }
 
 
-    /**
-     * @ORM\ManyToMany(targetEntity="EcommerceBundle\Entity\Product")
-     */
-    private $products;
-
 
     /**
      * Set date
@@ -73,39 +68,9 @@ class Command
      */
     public function __construct()
     {
-        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->setDate(new \DateTime());
+
     }
 
-    /**
-     * Add product
-     *
-     * @param \EcommerceBundle\Entity\Product $product
-     * @return Command
-     */
-    public function addProduct(\EcommerceBundle\Entity\Product $product)
-    {
-        $this->products[] = $product;
 
-        return $this;
-    }
-
-    /**
-     * Remove product
-     *
-     * @param \EcommerceBundle\Entity\Product $product
-     */
-    public function removeProduct(\EcommerceBundle\Entity\Product $product)
-    {
-        $this->products->removeElement($product);
-    }
-
-    /**
-     * Get products
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getProducts()
-    {
-        return $this->products;
-    }
 }
