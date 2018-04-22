@@ -49,14 +49,6 @@ class ProductAdminController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $file = $product->getImage();
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
-
-            $file->move( $this->getParameter('brochures_directory'),
-                $fileName);
-
-            $product->setImage($fileName);
-
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($product);
@@ -138,7 +130,6 @@ class ProductAdminController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('admin_product_delete', array('id' => $product->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 }
