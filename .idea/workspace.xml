@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96e8ba-b441-4cfb-a5ad-06de237a955d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml" />
+      <change type="DELETED" beforePath="C:\wamp\www\atelier3\web\uploads\brochures\509ccb803e252a2766a5e45b23939619.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="C:\wamp\www\atelier3\web\uploads\brochures\b7cb45f4de2a4cb6f5ffb100634bbcba.jpeg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="atelier3.iws" />
@@ -33,64 +34,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Entity/Product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding>
-                <element signature="e#42#74#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductAdminController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductAdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16094421">
-              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
               <folding>
                 <element signature="e#187#220#0#PHP" expanded="false" />
                 <element signature="e#275#328#0#PHP" expanded="false" />
                 <element signature="e#333#632#0#PHP" expanded="false" />
-                <element signature="e#459#484#1#PHP" expanded="true" />
                 <element signature="e#514#625#0#PHP" expanded="false" />
                 <element signature="e#571#624#0#PHP" expanded="false" />
                 <element signature="e#638#671#0#PHP" expanded="false" />
                 <element signature="e#676#880#0#PHP" expanded="false" />
                 <element signature="e#887#942#0#PHP" expanded="false" />
-                <element signature="e#1464#1614#0#PHP" expanded="false" />
-                <element signature="e#1519#1613#0#PHP" expanded="false" />
-                <element signature="e#1627#1689#0#PHP" expanded="false" />
-                <element signature="e#1694#1989#0#PHP" expanded="false" />
-                <element signature="e#1818#1982#0#PHP" expanded="false" />
-                <element signature="e#1874#1981#0#PHP" expanded="false" />
-                <element signature="e#1995#2072#0#PHP" expanded="false" />
-                <element signature="e#2077#2803#0#PHP" expanded="false" />
-                <element signature="e#2341#2563#0#PHP" expanded="false" />
-                <element signature="e#2580#2796#0#PHP" expanded="false" />
-                <element signature="e#2636#2795#0#PHP" expanded="false" />
-                <element signature="e#2809#2860#0#PHP" expanded="false" />
-                <element signature="e#2865#3277#0#PHP" expanded="false" />
-                <element signature="e#3036#3208#0#PHP" expanded="false" />
-                <element signature="e#3283#3461#0#PHP" expanded="false" />
-                <element signature="e#3466#3732#0#PHP" expanded="false" />
-                <element signature="e#3539#3667#0#PHP" expanded="false" />
-                <element signature="e#3539#3701#0#PHP" expanded="false" />
+                <element signature="e#1452#1602#0#PHP" expanded="false" />
+                <element signature="e#1507#1601#0#PHP" expanded="false" />
+                <element signature="e#1615#1677#0#PHP" expanded="false" />
+                <element signature="e#1682#1977#0#PHP" expanded="false" />
+                <element signature="e#1806#1970#0#PHP" expanded="false" />
+                <element signature="e#1862#1969#0#PHP" expanded="false" />
+                <element signature="e#1983#2060#0#PHP" expanded="false" />
+                <element signature="e#2329#2551#0#PHP" expanded="false" />
+                <element signature="e#2568#2784#0#PHP" expanded="false" />
+                <element signature="e#2624#2783#0#PHP" expanded="false" />
+                <element signature="e#2797#2848#0#PHP" expanded="false" />
+                <element signature="e#2853#3265#0#PHP" expanded="false" />
+                <element signature="e#3024#3196#0#PHP" expanded="false" />
+                <element signature="e#3271#3449#0#PHP" expanded="false" />
+                <element signature="e#3454#3720#0#PHP" expanded="false" />
+                <element signature="e#3527#3655#0#PHP" expanded="false" />
+                <element signature="e#3527#3689#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Product_imageListener.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="e#65#79#0#Twig" expanded="false" />
+                <element signature="e#120#149#0#Twig" expanded="false" />
+                <element signature="e#1924#1935#0#Twig" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.9">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product_imageListener.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.1">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38064516">
+              <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
               <folding>
-                <element signature="e#44#80#0#PHP" expanded="true" />
+                <element signature="e#299#396#0#PHP" expanded="false" />
+                <element signature="e#402#606#0#PHP" expanded="false" />
+                <element signature="e#612#1008#0#PHP" expanded="false" />
+                <element signature="e#718#783#0#PHP" expanded="false" />
+                <element signature="e#1119#1184#0#PHP" expanded="false" />
+                <element signature="e#1790#1899#0#PHP" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Media.~php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Entity/Media.~php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,7 +125,17 @@
         <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -113,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/module_Used/nav_bar.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/module_Used/header.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Repository/MediaRepository.php" />
@@ -155,15 +190,16 @@
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Entity/CmdProd.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Controller/PanierController.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Entity/Product.php" />
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/new.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/productAdmin/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml" />
-        <option value="$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Listener/Compteur_commentListener.php" />
         <option value="$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php" />
       </list>
     </option>
   </component>
@@ -227,6 +263,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ColorIdeProjectViewPane">
         <subPane>
           <PATH>
@@ -276,14 +313,85 @@
               <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="brochures" />
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcommerceBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcommerceBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atelier3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EcommerceBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -380,28 +488,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20877458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20877458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.588907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21104388" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1451876" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6264274" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.588907" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -423,15 +531,26 @@
           <line>110</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php</url>
+          <line>71</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php</url>
+          <line>62</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="33" />
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app_dev.php">
         <watch expression="$request-&gt;request" language="PHP" />
+        <watch expression="$asup" language="PHP" />
       </configuration>
       <configuration name="index.php">
         <watch expression="$request-&gt;request" language="PHP" />
@@ -442,13 +561,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Service/CalculSommeExtensionTwig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Session/Attribute/AttributeBag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.7666667">
@@ -533,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/public/js/addRemoveButton_productPanier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -600,7 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.4333334">
           <caret line="5781" column="0" selection-start-line="5781" selection-start-column="0" selection-end-line="5781" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,6 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,6 +779,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -705,10 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding>
-            <element signature="e#12#32#0#Twig" expanded="false" />
-            <element signature="e#263#282#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -716,15 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,18 +835,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#32#0#Twig" expanded="false" />
-            <element signature="e#572#591#0#Twig" expanded="false" />
-            <element signature="e#676#694#0#Twig" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Compteur_commentListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38918918">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50625">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.4">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.6">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#65#79#0#Twig" expanded="false" />
             <element signature="e#120#149#0#Twig" expanded="false" />
@@ -762,102 +872,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Entity/Media.~php">
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="165" column="7" selection-start-line="165" selection-start-column="7" selection-end-line="165" selection-end-column="7" />
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/brochures/b7cb45f4de2a4cb6f5ffb100634bbcba.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/brochures/509ccb803e252a2766a5e45b23939619.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/brochures/a09fb4bbd24aa75de0cf8c47d30d4961.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Compteur_commentListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38918918">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#44#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/uploads/brochures/1deae2e08005f04f0c1b922ea6703938.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.1">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#80#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Controller/ProductAdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16094421">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
           <folding>
             <element signature="e#187#220#0#PHP" expanded="false" />
             <element signature="e#275#328#0#PHP" expanded="false" />
             <element signature="e#333#632#0#PHP" expanded="false" />
-            <element signature="e#459#484#1#PHP" expanded="true" />
             <element signature="e#514#625#0#PHP" expanded="false" />
             <element signature="e#571#624#0#PHP" expanded="false" />
             <element signature="e#638#671#0#PHP" expanded="false" />
             <element signature="e#676#880#0#PHP" expanded="false" />
             <element signature="e#887#942#0#PHP" expanded="false" />
-            <element signature="e#1464#1614#0#PHP" expanded="false" />
-            <element signature="e#1519#1613#0#PHP" expanded="false" />
-            <element signature="e#1627#1689#0#PHP" expanded="false" />
-            <element signature="e#1694#1989#0#PHP" expanded="false" />
-            <element signature="e#1818#1982#0#PHP" expanded="false" />
-            <element signature="e#1874#1981#0#PHP" expanded="false" />
-            <element signature="e#1995#2072#0#PHP" expanded="false" />
-            <element signature="e#2077#2803#0#PHP" expanded="false" />
-            <element signature="e#2341#2563#0#PHP" expanded="false" />
-            <element signature="e#2580#2796#0#PHP" expanded="false" />
-            <element signature="e#2636#2795#0#PHP" expanded="false" />
-            <element signature="e#2809#2860#0#PHP" expanded="false" />
-            <element signature="e#2865#3277#0#PHP" expanded="false" />
-            <element signature="e#3036#3208#0#PHP" expanded="false" />
-            <element signature="e#3283#3461#0#PHP" expanded="false" />
-            <element signature="e#3466#3732#0#PHP" expanded="false" />
-            <element signature="e#3539#3667#0#PHP" expanded="false" />
-            <element signature="e#3539#3701#0#PHP" expanded="false" />
+            <element signature="e#1452#1602#0#PHP" expanded="false" />
+            <element signature="e#1507#1601#0#PHP" expanded="false" />
+            <element signature="e#1615#1677#0#PHP" expanded="false" />
+            <element signature="e#1682#1977#0#PHP" expanded="false" />
+            <element signature="e#1806#1970#0#PHP" expanded="false" />
+            <element signature="e#1862#1969#0#PHP" expanded="false" />
+            <element signature="e#1983#2060#0#PHP" expanded="false" />
+            <element signature="e#2329#2551#0#PHP" expanded="false" />
+            <element signature="e#2568#2784#0#PHP" expanded="false" />
+            <element signature="e#2624#2783#0#PHP" expanded="false" />
+            <element signature="e#2797#2848#0#PHP" expanded="false" />
+            <element signature="e#2853#3265#0#PHP" expanded="false" />
+            <element signature="e#3024#3196#0#PHP" expanded="false" />
+            <element signature="e#3271#3449#0#PHP" expanded="false" />
+            <element signature="e#3454#3720#0#PHP" expanded="false" />
+            <element signature="e#3527#3655#0#PHP" expanded="false" />
+            <element signature="e#3527#3689#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08709677">
+          <caret line="698" column="9" selection-start-line="698" selection-start-column="9" selection-end-line="698" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Entity/Media.~php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Form/ProductType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27741936">
+          <caret line="1112" column="9" selection-start-line="1112" selection-start-column="9" selection-end-line="1112" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/Event/ListenersInvoker.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4870968">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bridge/Doctrine/ContainerAwareEventManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33225808">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EcommerceBundle/Listener/Product_imageListener.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38064516">
+          <caret line="69" column="37" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding>
+            <element signature="e#299#396#0#PHP" expanded="false" />
+            <element signature="e#402#606#0#PHP" expanded="false" />
+            <element signature="e#612#1008#0#PHP" expanded="false" />
+            <element signature="e#718#783#0#PHP" expanded="false" />
+            <element signature="e#1119#1184#0#PHP" expanded="false" />
+            <element signature="e#1790#1899#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

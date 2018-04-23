@@ -22,7 +22,8 @@ class ProductType extends AbstractType
             ->add('name', TextType::class)
             ->add('description', TextareaType::class)
             ->add('price', MoneyType::class)
-            ->add('image', FileType::class);
+            ->add('image', FileType::class)
+        ;
     }
 
     /**

@@ -10,6 +10,8 @@ class Product_imageListener implements EventSubscriber
 {
 
     private $directoryImage;
+    private $tempFilename;
+    private $asup;
 
     public function __construct($directory)
     {
@@ -24,7 +26,6 @@ class Product_imageListener implements EventSubscriber
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
-
 
     public function prePersist(LifecycleEventArgs $args)
     {
@@ -44,6 +45,36 @@ class Product_imageListener implements EventSubscriber
 
     }
 
+    public function preRemove(LifecycleEventArgs $args)
+    {
+
+        $entity = $args->getEntity();
+        if (!$entity instanceof Product) {
+            return;
+
+        }
+
+        $this->tempFilename = $entity->getImage();
+    }
+
+    public function postRemove(LifecycleEventArgs $args)
+    {
+        $entity = $args->getEntity();
+        if (!$entity instanceof Product) {
+            return;
+
+        }
+
+        // En PostRemove, on n'a pas acc?s ? l'id, on utilise notre nom sauvegard?
+        if (file_exists($this->directoryImage . '/' . $this->tempFilename)) {
+            // On supprime le fichier
+            $f = $this->tempFilename;
+            $this->asup = $this->directoryImage . '/' . $this->tempFilename;
+
+            unlink($this->asup);
+
+        }
+    }
 
     /**
      * Returns an array of events this subscriber wants to listen to.
@@ -54,6 +85,8 @@ class Product_imageListener implements EventSubscriber
     {
         return array(
             'prePersist',
+            'preRemove',
+            'postRemove'
         );
     }
 }
