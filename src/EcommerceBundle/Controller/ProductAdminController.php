@@ -4,6 +4,8 @@ namespace EcommerceBundle\Controller;
 
 use EcommerceBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
@@ -83,6 +85,10 @@ class ProductAdminController extends Controller
      */
     public function editAction(Request $request, Product $product)
     {
+        //to avoid error as the persisted entity contain path string
+        //and ProductType expected a file
+        $product->setImage(new File($this->getParameter('brochures_directory').'/'.$product->getImage()) );
+
         $deleteForm = $this->createDeleteForm($product);
         $editForm = $this->createForm('EcommerceBundle\Form\ProductType', $product);
         $editForm->handleRequest($request);

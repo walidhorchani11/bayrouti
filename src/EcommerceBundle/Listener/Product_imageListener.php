@@ -4,18 +4,18 @@ namespace EcommerceBundle\Listener;
 
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
+use Doctrine\ORM\Event\PreUpdateEventArgs;
 use EcommerceBundle\Entity\Product;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class Product_imageListener implements EventSubscriber
 {
 
     private $directoryImage;
     private $tempFilename;
-    private $asup;
 
     public function __construct($directory)
     {
-
         $this->directoryImage = $directory;
 
     }
@@ -27,14 +27,36 @@ class Product_imageListener implements EventSubscriber
         return md5(uniqid());
     }
 
-    public function prePersist(LifecycleEventArgs $args)
+    private function uploadFile($entity)
     {
-
-        $entity = $args->getEntity();
-        if (!$entity instanceof Product) {
+        // upload only works for Product entities
+        if (!$entity instanceof Product)
             return;
 
+        $file = $entity->getImage();
+
+        // only upload new files
+        if ($file instanceof UploadedFile) {
+
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
+            $file->move($this->directoryImage, $fileName);
+            $entity->setImage($fileName);
+
         }
+    }
+
+    private function rmFile($file)
+    {
+        if (file_exists($file))
+            unlink($file);
+
+    }
+
+    public function prePersist(LifecycleEventArgs $args)
+    {
+        $entity = $args->getEntity();
+        if (!$entity instanceof Product)
+            return;
 
         $file = $entity->getImage();
         $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
@@ -42,38 +64,38 @@ class Product_imageListener implements EventSubscriber
         $file->move($this->directoryImage, $fileName);
 
         $entity->setImage($fileName);
+        $entity->setImageName($fileName);
 
     }
 
     public function preRemove(LifecycleEventArgs $args)
     {
-
         $entity = $args->getEntity();
-        if (!$entity instanceof Product) {
+        if (!$entity instanceof Product)
             return;
 
-        }
-
         $this->tempFilename = $entity->getImage();
+    }
+
+    public function preUpdate(PreUpdateEventArgs $args)
+    {
+        $entity = $args->getEntity();
+
+        $this->uploadFile($entity);
+
+        $this->rmFile($this->directoryImage . '/' . $entity->getImageName());
+        $entity->setImageName($entity->getImage());
+
     }
 
     public function postRemove(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
-        if (!$entity instanceof Product) {
+        if (!$entity instanceof Product)
             return;
 
-        }
-
         // En PostRemove, on n'a pas acc?s ? l'id, on utilise notre nom sauvegard?
-        if (file_exists($this->directoryImage . '/' . $this->tempFilename)) {
-            // On supprime le fichier
-            $f = $this->tempFilename;
-            $this->asup = $this->directoryImage . '/' . $this->tempFilename;
-
-            unlink($this->asup);
-
-        }
+        $this->rmFile($this->directoryImage . '/' . $this->tempFilename);
     }
 
     /**
@@ -86,8 +108,8 @@ class Product_imageListener implements EventSubscriber
         return array(
             'prePersist',
             'preRemove',
-            'postRemove'
+            'postRemove',
+            'preUpdate',
         );
     }
 }
-

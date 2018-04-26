@@ -32,6 +32,14 @@ class Product
 
 
     /**
+     * @ORM\Column(name="image_name", type="string")
+     */
+    private $imageName;
+
+
+
+
+    /**
      * @ORM\OneToMany(targetEntity="EcommerceBundle\Entity\Comment", mappedBy="product", cascade={"remove"})
      */
     private $comments;
@@ -249,5 +257,29 @@ class Product
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * Set imageName
+     *
+     * @param string $imageName
+     *
+     * @return Product
+     */
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+
+        return $this;
+    }
+
+    /**
+     * Get imageName
+     *
+     * @return string
+     */
+    public function getImageName()
+    {
+        return $this->imageName;
     }
 }
