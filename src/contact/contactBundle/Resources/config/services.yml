@@ -1,0 +1,30 @@
+parameters:
+    class_contact_type: contact\contactBundle\Form\ContactType
+    class_contact_form_handler: contact\contactBundle\Service\ContactHandler
+    class_service_email_manager: contact\contactBundle\Service\EmailManager
+
+services:
+#    contact.example:
+#        class: contact\contactBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    contact.form.factory:
+        factory: form.factory:createNamed
+        class: Symfony\Component\Form\Form
+        arguments:
+            - 'contact'
+            - '%class_contact_type%'
+
+
+    contact.handler.form:
+        class: '%class_contact_form_handler%'
+        arguments:
+            - '@contact.form.factory'
+            - '@request_stack'
+            - '@session'
+            - '@contact.email.manager'
+
+    contact.email.manager:
+        class: '%class_service_email_manager%'
+        arguments: ['@mailer','@templating', '%contact_mailer%']
+

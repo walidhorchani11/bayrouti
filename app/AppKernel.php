@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new EcommerceBundle\EcommerceBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
+            new contact\contactBundle\contactBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

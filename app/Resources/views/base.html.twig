@@ -9,7 +9,7 @@
     <meta name="author" content="Horchani Walid">
 
 
-    <title> {% block title %} Blog-Walid Horchani {% endblock %} </title>
+    <title> {% block title %} Bayrouti Mayonaise {% endblock %} </title>
 
     <script src="{{ asset('jquery/jquery-3.3.1.js') }}"></script>
 
@@ -39,14 +39,15 @@
 </head>
 
 <body>
-
 <!-- Navigation -->
 {% include ':module_Used:nav_bar.html.twig' %}
 
 {% block header %}
 {% endblock %}
 
+
 <div class="container">
+    {% include ':module_Used:flashMsg.html.twig' %}
     {% block body %}
     {% endblock %}
 </div>

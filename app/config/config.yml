@@ -9,6 +9,7 @@ imports:
 parameters:
     locale: en
     brochures_directory: '%kernel.root_dir%/../web/uploads/brochures'
+    contact_mailer: walidhorchani11@gmail.com
 
 framework:
     #esi: ~
@@ -36,6 +37,10 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    form_themes:
+        - 'Form/fields.html.twig'
+    #    - 'bootstrap_3_layout.html.twig'
+
 
 # Doctrine Configuration
 doctrine:
