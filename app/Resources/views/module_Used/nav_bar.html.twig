@@ -10,10 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="{{ path('ecommerce_home') }}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('product_index') }}">Product</a>
+                    <a class="nav-link" href="{{ path('product_index') }}">Produit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('client_list') }}">Client</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('contact_homepage') }}">Contact</a>

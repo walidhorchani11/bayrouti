@@ -1,0 +1,18 @@
+<hr>
+<h3>parmi nos clients</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Aliquam nulla eros, lobortis a ipsum a, auctor pellentesque leo.
+</p>
+<a class="btn btn-primary" href="{{ path('client_list') }}">nos clients</a>
+
+
+<div class="row">
+    {% for client in clients %}
+        <div class="col-4">
+            <img src="{{ asset('uploads/brochures/'~client.image) }}" class=" img-responsive img-circle"
+                 alt="{{ client.name }}" >
+
+            <h2>{{ client.name }}</h2>
+        </div>
+    {% endfor %}
+</div>

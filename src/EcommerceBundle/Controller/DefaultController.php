@@ -6,8 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function homeAction()
     {
-        return $this->render('EcommerceBundle:Default:index.html.twig');
+        return $this->render('EcommerceBundle:Default:home.html.twig');
     }
 }

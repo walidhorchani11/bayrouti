@@ -15,8 +15,8 @@
         <div class="row">
 
             <div class="col-sm-6{# {% if loop.index is even %}pull-right{% else %}{% endif %}#}">
-                <img src="{{ asset('uploads/brochures/'~product.image) }}"
-                     class=" img-responsive {#{% if loop.index is even %}pull-right {% else %}pull-left{% endif %} col-5#}">
+                <img src="{{ asset('uploads/brochures/'~product.image) }}"  alt="{{ product.name }}"
+                     class=" img-responsive" {#{% if loop.index is even %}pull-right {% else %}pull-left{% endif %} col-5#}>
             </div>
 
             <div class="col-sm-6">

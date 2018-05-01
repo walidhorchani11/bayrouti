@@ -1,0 +1,19 @@
+<hr>
+<h3>parmi nos produits</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Aliquam nulla eros, lobortis a ipsum a, auctor pellentesque leo.
+    Nulla facilisi. Vestibulum gravida aliquet nulla, sed iaculis nisi.
+    <a class="btn btn-primary" href="{{ path('product_index') }}">list produits</a>
+ </p>
+<div class="row">
+    {% for product in products %}
+        <div class="col-4">
+            <img src="{{ asset('uploads/brochures/'~product.image) }}" class=" img-responsive img-circle"
+                    alt="{{ product.name }}" >
+
+            <h2>{{ product.name }}</h2>
+            {{ product.price }}<br>
+        </div>
+    {% endfor %}
+</div>

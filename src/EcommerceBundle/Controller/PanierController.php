@@ -83,7 +83,6 @@ class PanierController extends Controller
 
     }
 
-
     public function validerAction(Request $request)
     {
 
@@ -107,42 +106,18 @@ class PanierController extends Controller
             $em->persist($cmdProd);
 
         }
-//TODO :ajout d flash bag msg
         $em->flush();
-        $session->remove('panier');
 
+        $listProduct = $rep->getProductPanier(array_keys($panierProduct));
+        $tel  = $request->request->get('numTel');
+        $this->get('contact.email.manager')->validationMail($listProduct,$tel,$panierProduct);
+
+        $session->getFlashBag()->add('validation','vous recevrez un appel pour confirmez votre commande');
+
+        $session->remove('panier');
 
         return $this->redirectToRoute('product_index');
 
-
-        //num tel pour lajouter a msg envoye a admin pour conatcter le client
-        // $tel  = $request->request->get('tel');
-
-        /*  $message =  \Swift_Message::newInstance()
-              ->setFrom('walidhorchani11@gmail.com')
-              ->setTo('walidhorchani11@gmail.com')
-              ->setBody(
-                  $this->renderView(
-                  // app/Resources/views/Emails/registration.html.twig
-                      '@Ecommerce/Comment/new.html.twig'
-                  ),
-                  'text/html'
-              )*/
-        /*
-          If you also want to include a plaintext version of the message
-        ->addPart(
-            $this->renderView(
-                'Emails/registration.txt.twig',
-                array('name' => $name)
-            ),
-            'text/plain'
-        )
-
-    ;*/
-
-        /* $this->get('mailer')->send($message);
-
-         return $this->redirectToRoute('product_index');*/
     }
 
 }

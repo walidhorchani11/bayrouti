@@ -12,8 +12,7 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProductRepository extends EntityRepository
 {
-
-    public function getProductComment($id)
+   /* public function getProductComment($id)
     {
         $qb = $this->createQueryBuilder('p');
         $qb->where('p.id =:id')
@@ -23,9 +22,7 @@ class ProductRepository extends EntityRepository
         return $qb
             ->getQuery()
             ->getSingleResult();
-
-    }
-
+    }*/
 
     public function getProductPanier($array)
     {
@@ -38,7 +35,5 @@ class ProductRepository extends EntityRepository
             ->getResult();
 
     }
-
-
 
 }

@@ -3,15 +3,14 @@
 namespace EcommerceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Product
+ * Client
  *
- * @ORM\Table(name="product")
- * @ORM\Entity(repositoryClass="EcommerceBundle\Repository\ProductRepository")
+ * @ORM\Table(name="client")
+ * @ORM\Entity(repositoryClass="EcommerceBundle\Repository\ClientRepository")
  */
-class Product
+class Client
 {
     /**
      * @var int
@@ -23,21 +22,6 @@ class Product
     private $id;
 
     /**
-     * @ORM\Column(name="image", type="string")
-     *
-     * @Assert\NotBlank()
-     * @Assert\File()
-     */
-    private $image;
-
-
-    /**
-     * @ORM\Column(name="image_name", type="string")
-     */
-    private $imageName;
-
-
-    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
@@ -47,41 +31,34 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
+     * @ORM\Column(name="image", type="string", length=255)
      */
-    private $description;
+    private $image;
 
     /**
-     * @var float
+     * @var string
      *
-     * @ORM\Column(name="price", type="float")
+     * @ORM\Column(name="imageName", type="string", length=255)
      */
-    private $price;
+    private $imageName;
 
 
     /**
      * Get id
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
         return $this->id;
     }
 
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-    }
-
     /**
      * Set name
      *
      * @param string $name
-     * @return Product
+     *
+     * @return Client
      */
     public function setName($name)
     {
@@ -101,59 +78,11 @@ class Product
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Product
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set price
-     *
-     * @param float $price
-     * @return Product
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-
-    /**
-     * Get price
-     *
-     * @return float
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-
-    /**
      * Set image
      *
      * @param string $image
      *
-     * @return Product
+     * @return Client
      */
     public function setImage($image)
     {
@@ -177,7 +106,7 @@ class Product
      *
      * @param string $imageName
      *
-     * @return Product
+     * @return Client
      */
     public function setImageName($imageName)
     {
@@ -196,3 +125,4 @@ class Product
         return $this->imageName;
     }
 }
+

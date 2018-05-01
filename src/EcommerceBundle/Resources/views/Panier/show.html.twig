@@ -2,7 +2,7 @@
 {% block header %}
     {% include 'module_Used/header.html.twig' with {'url': asset('image/5.jpg'),
     'titre': 'votre Panier en attente',
-    'description': 'among our service we can provide you by our product'
+    'description': 'votre Panier'
     } %}
 {% endblock %}
 
@@ -79,7 +79,7 @@
                 </div>
                 <form action="{{ path('panier_valider') }}" method="post">
                     <div class="modal-body">
-                        <input type="tel" placeholder="entrez votre numero : " name="num">
+                        <input type="tel" placeholder="entrez votre numero : " name="numTel">
                     </div>
                     <div class="modal-footer">
                         <input type="submit" value="Passe" class="btn btn-primary">

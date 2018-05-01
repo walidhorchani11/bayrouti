@@ -3,11 +3,12 @@
 namespace EcommerceBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CommentType extends AbstractType
+class ClientType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -15,19 +16,16 @@ class CommentType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('createdAt')
-            ->add('content')
-            ->add('valider',SubmitType::class)
+            ->add('name', TextType::class)
+            ->add('image',FileType::class)
         ;
-    }
-    
-    /**
+    }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'EcommerceBundle\Entity\Comment'
+            'data_class' => 'EcommerceBundle\Entity\Client'
         ));
     }
 
@@ -36,7 +34,7 @@ class CommentType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'ecommercebundle_comment';
+        return 'ecommercebundle_client';
     }
 
 

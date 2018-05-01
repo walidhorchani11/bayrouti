@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+    {% include ":module_Used:header.html.twig"
+    with {'url':  asset('image/5.jpg'),
+    'titre':'nos client',
+    'description': 'client'
+    } %}
+{% endblock %}
+{% block body %}
+    <h1>Clients list</h1>
+
+    {% for client in clients %}
+        <div class="row">
+            <div class="col-sm-6">
+                {{ client.name }}
+            </div>
+            <div class="col-sm-6">
+                <img src="{{ asset('uploads/brochures/')~client.image }}" class=" img-responsive">
+            </div>
+        </div>
+        {% if not loop.last %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

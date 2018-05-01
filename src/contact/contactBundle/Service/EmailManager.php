@@ -18,7 +18,7 @@ class EmailManager
     private $receiver;
 
 
-    public function __construct(Swift_Mailer $mailer,TwigEngine $templating, $ourMail)
+    public function __construct(Swift_Mailer $mailer, TwigEngine $templating, $ourMail)
     {
 
         $this->templating = $templating;
@@ -48,6 +48,18 @@ class EmailManager
         $this->subject = 'contact Mail';
         $this->receiver = $this->ourMail;
         $this->body = $this->setTemplate('@contact/Message/contactMessage.html.twig', array('contact' => $contact));
+        $this->sendTo();
+
+    }
+
+    public function validationMail($list_product_inPanier, $tel, $sessionPanier)
+    {
+
+        $this->subject = 'Validation Commande';
+        $this->receiver = $this->ourMail;
+        $this->body = $this->setTemplate('@Ecommerce/Message/validationMessage.html.twig',
+            array('listProduct' => $list_product_inPanier, 'tel' => $tel, 'sessionPanier' => $sessionPanier)
+        );
         $this->sendTo();
 
     }

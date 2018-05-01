@@ -5,6 +5,7 @@ namespace EcommerceBundle\Listener;
 use Doctrine\Common\EventSubscriber;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
+use EcommerceBundle\Entity\Client;
 use EcommerceBundle\Entity\Product;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
@@ -30,7 +31,7 @@ class Product_imageListener implements EventSubscriber
     private function uploadFile($entity)
     {
         // upload only works for Product entities
-        if (!$entity instanceof Product)
+        if ($this->testEntity($entity) === false)
             return;
 
         $file = $entity->getImage();
@@ -52,10 +53,20 @@ class Product_imageListener implements EventSubscriber
 
     }
 
+    public function testEntity($entity)
+    {
+        $res = false;
+        if ($entity instanceof Product || $entity instanceof Client)
+            $res = true;
+
+        return $res;
+
+    }
+
     public function prePersist(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
-        if (!$entity instanceof Product)
+        if ($this->testEntity($entity) === false)
             return;
 
         $file = $entity->getImage();
@@ -71,7 +82,7 @@ class Product_imageListener implements EventSubscriber
     public function preRemove(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
-        if (!$entity instanceof Product)
+        if ($this->testEntity($entity) === false)
             return;
 
         $this->tempFilename = $entity->getImage();
@@ -91,7 +102,7 @@ class Product_imageListener implements EventSubscriber
     public function postRemove(LifecycleEventArgs $args)
     {
         $entity = $args->getEntity();
-        if (!$entity instanceof Product)
+        if ($this->testEntity($entity) === false)
             return;
 
         // En PostRemove, on n'a pas acc?s ? l'id, on utilise notre nom sauvegard?
