@@ -13,8 +13,8 @@ $(document).ready(function () {
         //selectionner le td du total pour update
         var tdSomme = $(this).parent().siblings('.sommeProduct');
 
-        $.get('http://localhost/atelier3/web/app_dev.php/panier/update?idProd=' + idProd + '&qte=' + qte, function () {
-            console.log('qte modifier avec success');
+        $.get(Routing.generate('panier_update', {'idProd': idProd, 'qte': qte}), function () {
+            console.log('dtorysuccess');
             tdSomme.text(somme);
 
             //appel de fonction pour maj le total du panier
@@ -30,7 +30,7 @@ $(document).ready(function () {
         var idProd = $(this).attr('id');
         var tr = $(this).parents("tr");
 
-        $.get('http://localhost/atelier3/web/app_dev.php/panier/delete?idProd=' + idProd, function () {
+        $.get(Routing.generate('panier_delete', {'idProd': idProd}), function () {
             $(tr).remove();
             //on peut creer une fonction qui test le nombre de tr si = 1 cad qu il ya seulement le
             //tete du tableau, on change le bouton -> retour au produit
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
             //if panier empty then delete button valider panier
             if (tr_tbody == 0) {
-                $("#btn_valider").remove();
+                $(".validation").remove();
                 var noeud_tr = "<tr> <td colspan=" + "5>" + "<span>votre panier est vide</span></td></tr>"
                 $("tbody").append(noeud_tr);
             }

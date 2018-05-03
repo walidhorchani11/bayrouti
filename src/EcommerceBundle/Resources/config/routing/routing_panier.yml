@@ -1,6 +1,8 @@
 panier_add:
     path:     /add
     defaults: { _controller: "EcommerceBundle:Panier:add" }
+    options:
+        expose: true
 
 panier_show:
     path:    /show
@@ -9,10 +11,14 @@ panier_show:
 panier_delete:
     path:     /delete
     defaults: { _controller: "EcommerceBundle:Panier:delete" }
+    options:
+        expose: true
 
 panier_update:
     path:     /update
     defaults: { _controller: "EcommerceBundle:Panier:update" }
+    options:
+        expose: true
 
 panier_valider:
     path:     /valider

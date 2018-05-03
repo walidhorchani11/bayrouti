@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new EcommerceBundle\EcommerceBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new contact\contactBundle\contactBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
