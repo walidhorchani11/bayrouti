@@ -9,7 +9,7 @@
 <div class="row">
     {% for client in clients %}
         <div class="col-4">
-            <img src="{{ asset('uploads/brochures/'~client.image) }}" class=" img-responsive img-circle"
+            <img src="{{ ('uploads/brochures/'~client.image)|imagine_filter('my_thumb') }}" class=" img-responsive img-circle"
                  alt="{{ client.name }}" >
 
             <h2>{{ client.name }}</h2>

@@ -9,7 +9,7 @@
 <div class="row">
     {% for product in products %}
         <div class="col-4">
-            <img src="{{ asset('uploads/brochures/'~product.image) }}" class=" img-responsive img-circle"
+            <img src="{{ ('uploads/brochures/'~product.image)|imagine_filter('my_thumb') }}" class=" img-responsive img-circle"
                     alt="{{ product.name }}" >
 
             <h2>{{ product.name }}</h2>

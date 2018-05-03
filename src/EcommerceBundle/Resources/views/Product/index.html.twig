@@ -3,7 +3,7 @@
 {% extends "base.html.twig" %}
 
 {% block header %}
-    {% include ":module_Used:header.html.twig" with {'url': asset('image/4.jpg'),
+    {% include ":module_Used:header.html.twig" with {'url': 'image/4.jpg',
     'titre':'our product',
     'description': 'among our service we can provide you by our product'
     } %}
@@ -15,7 +15,7 @@
         <div class="row">
 
             <div class="col-sm-6{# {% if loop.index is even %}pull-right{% else %}{% endif %}#}">
-                <img src="{{ asset('uploads/brochures/'~product.image) }}"  alt="{{ product.name }}"
+                <img src="{{ ('uploads/brochures/'~product.image)|imagine_filter('my_thumb') }}"  alt="{{ product.name }}"
                      class=" img-responsive" {#{% if loop.index is even %}pull-right {% else %}pull-left{% endif %} col-5#}>
             </div>
 
