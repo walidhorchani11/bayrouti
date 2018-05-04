@@ -30,13 +30,11 @@ $(document).ready(function () {
         var idProd = $(this).attr('id');
         var tr = $(this).parents("tr");
 
-        $.get(Routing.generate('panier_delete', {'idProd': idProd}), function () {
+        $.get(Routing.generate('panier_delete', {'idProd': idProd}), function (data) {
             $(tr).remove();
-            //on peut creer une fonction qui test le nombre de tr si = 1 cad qu il ya seulement le
-            //tete du tableau, on change le bouton -> retour au produit
 
             tr_tbody--;
-            console.log(tr_tbody);
+            console.log(data);
 
             //if panier empty then delete button valider panier
             if (tr_tbody == 0) {
@@ -45,7 +43,7 @@ $(document).ready(function () {
                 $("tbody").append(noeud_tr);
             }
 
-            //appel de fonction pour maj le total du panier
+            //appel de fonction pour majjj le total du panier
             coutTotal();
 
 

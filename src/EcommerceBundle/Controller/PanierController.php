@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PanierController extends Controller
 {
@@ -44,27 +45,29 @@ class PanierController extends Controller
 
     }
 
-    public function deleteAction(Request $request)
+
+    /**
+     * call to methode in our service panierManager
+     *
+     * @return JsonResponse
+     */
+    public function deleteAction()
     {
-
-        $idProd = $request->query->get('idProd');
-        $session = $this->get('session');
-        $panier = $session->get('panier');
-        unset($panier[$idProd]);
-        $session->set('panier', $panier);
-
-        die;
-
+        return $this->get('ecommerce.panier.manager')->deleteProduct();
     }
 
+    /**
+     * show panier client
+     *
+     * @return Response
+     * @throws \Exception
+     */
     public function showAction()
     {
 
-        $session = $this->get('session');
-        $panier = $session->get('panier');
-
-        $em = $this->getDoctrine()->getManager();
-        $listProduct = $em->getRepository('EcommerceBundle:Product')->getProductPanier(array_keys($panier));
+        $panierManager = $this->get('ecommerce.panier.manager');
+        $panier = $panierManager->getPanierSession();
+        $listProduct = $panierManager->retrieveProductPanier();
 
         return $this->render('EcommerceBundle:Panier:show.html.twig', array('listProduct' => $listProduct, 'panier' => $panier));
 
@@ -109,10 +112,10 @@ class PanierController extends Controller
         $em->flush();
 
         $listProduct = $rep->getProductPanier(array_keys($panierProduct));
-        $tel  = $request->request->get('numTel');
-        $this->get('contact.email.manager')->validationMail($listProduct,$tel,$panierProduct);
+        $tel = $request->request->get('numTel');
+        $this->get('contact.email.manager')->validationMail($listProduct, $tel, $panierProduct);
 
-        $session->getFlashBag()->add('validation','vous recevrez un appel pour confirmez votre commande');
+        $session->getFlashBag()->add('validation', 'vous recevrez un appel pour confirmez votre commande');
 
         $session->remove('panier');
 

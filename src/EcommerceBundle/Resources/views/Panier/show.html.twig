@@ -2,102 +2,12 @@
 {% block header %}
     {% include 'module_Used/header.html.twig' with {'url': 'image/5.jpg',
     'titre': 'votre Panier en attente',
-    'description': 'votre Panier'
-    } %}
+    'description': 'votre Panier'} %}
 {% endblock %}
-
 {% block body %}
-
-    <table class="table table-striped table-hover table-responsive">
-        <thead>
-        <tr>
-            <th>Product</th>
-            <th>Quantité</th>
-            <th>Prix unitaire</th>
-            <th>Total HT</th>
-            <th>delete</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% if listProduct|length == 0 %}
-            <tr>
-                <td colspan="5" class="text-center">
-                    <span>votre panier est vide</span>
-                </td>
-            </tr>
-        {% else %}
-            {% for product in listProduct %}
-                <tr>
-                    <td>
-                        {{ product.name }}
-                    </td>
-                    <td>
-                        <select id="{{ product.id }}" class="update_qte">
-                            {% for i in 1..20 %}
-                                <option value="{{ i }}" {% if i == panier[product.id] %}selected{% endif %}>
-                                    {{ i }}
-                                </option>
-                            {% endfor %}
-                        </select>
-
-                        {#<input class="update_qte" type="number"
-                               placeholder="{{ app.session.get('panier')[product.id] }}">
-            #}
-                    </td>
-                    <td class="price">
-                        {{ product.price }}
-                    </td>
-                    <td class="sommeProduct">
-                        {{ calculCout(product) }}
-                    </td>
-                    <td>
-                        <span id="{{ product.id }}"
-                              class="glyphicon glyphicon-remove lien_retirer">retirer</span>
-                    </td>
-                </tr>
-            {% endfor %}
-
-        {% endif %}
-        </tbody>
-    </table>
-    <a href="{{ path('product_index') }}">
-        <button class="btn btn-primary ">Ajouter Produit</button>
-    </a>
-    {% if listProduct|length > 0 %}
-        <a href="#tel" class="btn btn-primary validation " data-toggle="modal">Validez Panier</a>
-    {% endif %}
-    {#
-    ajout modal pour ajout de tel "confirmation de la commande via tel"
-    #}
-    {# TODO mise en form modal  & validation de l'input tel#}
-    <div class="modal fade" id="tel">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <span class="modal-title">confirmation de votre commande par telephone : </span>
-                </div>
-                <form action="{{ path('panier_valider') }}" method="post">
-                    <div class="modal-body">
-                        <input type="tel" placeholder="entrez votre numero : " name="numTel">
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" value="Passe" class="btn btn-primary">
-                    </div>
-                </form>
-            </div>
-            <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-
-    {#fin ajout moda - note- ajout on utilisant le plugin installer sur phpstorm 'bootstrap live' cmd: bts- modal#}
-
-    <div class="pull-right text-info"> {{ 'TOTAL : ' }}<span id="totalpanier">{{ calculCoutPanier() }}</span></div>
-
+    {% include '@Ecommerce/Panier/include/panier_affichage.html.twig' %}
+    {% include '@Ecommerce/Panier/include/modal_tel.html.twig' %}
 {% endblock %}
-
 {% block javascripts %}
     <script src="{{ asset('bundles/ecommerce/js/panier_show.js') }}"></script>
 {% endblock %}

@@ -2,6 +2,7 @@ parameters:
     class.calcul.cout.product: EcommerceBundle\Service\CalculSomme
     class.calcul_cout.product_twig.extension: EcommerceBundle\Service\CalculSommeExtensionTwig
     class.image.product: EcommerceBundle\Listener\Product_imageListener
+    class.panier.manager: EcommerceBundle\Manager\PanierManager
 
 
 services:
@@ -27,3 +28,12 @@ services:
             - '%brochures_directory%'
         tags:
             - { name: doctrine.event_subscriber, event: prePersist }
+
+
+    ecommerce.panier.manager:
+        class: '%class.panier.manager%'
+        arguments:
+            - '@session'
+            - '@doctrine.orm.entity_manager'
+            - '@request'
+        scope: request
