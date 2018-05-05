@@ -12,36 +12,15 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PanierController extends Controller
 {
-    public function addAction(Request $request)
+
+    /**
+     * call method in our service to add or remove product from panier session
+     *
+     * @return JsonResponse
+     */
+    public function add_removeAction()
     {
-
-        $session = $this->get('session');
-        //on test si on a pas session 'panier' on va le crer
-        if (!$session->has('panier'))
-            $session->set('panier', array());
-
-        $panier = $session->get('panier');
-
-        //recuperer id du produit qu on veut ajouter
-        $idProd = $request->query->get('id');
-
-        //on test si ce produit n'existe pas dans le panier on le rajout..sil existe on le supprime
-        if (!array_key_exists($idProd, $panier)) {
-
-            $qte = $request->query->get('qte');
-            $panier[$idProd] = $qte;
-            echo " produit ajouter avec succes";
-
-        } else {
-            unset($panier[$idProd]);
-            //echo "product exixst on va le supprimer";
-        }
-
-        //mise a jour de la session
-        $session->set('panier', $panier);
-
-        var_dump($panier);
-        die;
+        return $this->get('ecommerce.panier.manager')->addOrRmoveProduct();
 
     }
 
@@ -73,51 +52,29 @@ class PanierController extends Controller
 
     }
 
-    //methode appele en ajax pour modifier la quantite du produit
-    public function updateAction(Request $request)
+    /**
+     * call method of our service to update qte
+     * for product already exist in session panier & update it
+     *
+     * @return JsonResponse
+     */
+    public function updateAction()
     {
-        $idProd = $request->query->get('idProd');
-        $qte = $request->query->get('qte');
-        $session = $this->get('session');
-        $panier = $session->get('panier');
-        $panier[$idProd] = $qte;
-        $session->set('panier', $panier);
-        die;
+
+        return $this->get('ecommerce.panier.manager')->updateProduct();
 
     }
 
-    public function validerAction(Request $request)
+
+    /**
+     * call this method when client validate his command
+     *
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function validerAction()
     {
 
-        //recuperre la session panier
-        $session = $this->get('session');
-        $panierProduct = $session->get('panier');
-        $cmd = new Command();
-
-        $em = $this->getDoctrine()->getManager();
-        $rep = $em->getRepository('EcommerceBundle:Product');
-        $em->persist($cmd);
-
-        foreach ($panierProduct as $key => $singleProduct) {
-            $cmdProd = new CmdProd();
-            $cmdProd->setCommande($cmd);
-
-            $product = $rep->find($key);
-            $cmdProd->setProduct($product);
-
-            $cmdProd->setQte($singleProduct);
-            $em->persist($cmdProd);
-
-        }
-        $em->flush();
-
-        $listProduct = $rep->getProductPanier(array_keys($panierProduct));
-        $tel = $request->request->get('numTel');
-        $this->get('contact.email.manager')->validationMail($listProduct, $tel, $panierProduct);
-
-        $session->getFlashBag()->add('validation', 'vous recevrez un appel pour confirmez votre commande');
-
-        $session->remove('panier');
+        $this->get('ecommerce.panier.manager')->validerCommande();
 
         return $this->redirectToRoute('product_index');
 

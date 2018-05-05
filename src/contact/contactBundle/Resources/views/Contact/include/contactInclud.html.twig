@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-6">
+        <span class="font-italic text-danger">coordonees</span>
+        <ul>
+            <li>Adresse: xxxxxxxx</li>
+            <li>Tel: xxxxxxxx</li>
+            <li>Email: xxxxxxxx</li>
+            <li>web: xxxxxxxx</li>
+        </ul>
+    </div>
+    <div class="col-6">
+        <span class="font-italic text-primary">votre message</span>
+
+        {{ form_start(form, {'action': path('contact_homepage')  }) }}
+
+        {{ form_row(form.client) }}
+        {{ form_row(form.reclamation) }}<br>
+        {{ form_end(form) }}
+    </div>
+</div>

@@ -2,14 +2,12 @@
 
 namespace contact\contactBundle\Controller;
 
-use contact\contactBundle\Entity\Contact;
-use contact\contactBundle\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
+
 
 class ContactController extends Controller
 {
-    public function contactAction(Request $request)
+    public function contactAction()
     {
         /* $contact = new Contact();
          $form = $this->createForm(ContactType::class, $contact);*/

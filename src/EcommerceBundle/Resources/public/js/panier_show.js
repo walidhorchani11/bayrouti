@@ -13,8 +13,8 @@ $(document).ready(function () {
         //selectionner le td du total pour update
         var tdSomme = $(this).parent().siblings('.sommeProduct');
 
-        $.get(Routing.generate('panier_update', {'idProd': idProd, 'qte': qte}), function () {
-            console.log('dtorysuccess');
+        $.get(Routing.generate('panier_update', {'idProd': idProd, 'qte': qte}), function (data) {
+            console.log(data);
             tdSomme.text(somme);
 
             //appel de fonction pour maj le total du panier

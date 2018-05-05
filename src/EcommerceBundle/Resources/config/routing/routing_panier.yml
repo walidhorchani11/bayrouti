@@ -1,6 +1,6 @@
 panier_add:
-    path:     /add
-    defaults: { _controller: "EcommerceBundle:Panier:add" }
+    path:     /add_remove
+    defaults: { _controller: "EcommerceBundle:Panier:add_remove" }
     options:
         expose: true
 

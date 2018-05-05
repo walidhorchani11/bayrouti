@@ -22,9 +22,9 @@ services:
             - '@contact.form.factory'
             - '@request_stack'
             - '@session'
-            - '@contact.email.manager'
+            - '@ecommerce.contact.email.manager'
 
-    contact.email.manager:
+    ecommerce.contact.email.manager:
         class: '%class_service_email_manager%'
         arguments: ['@mailer','@templating', '%contact_mailer%']
 

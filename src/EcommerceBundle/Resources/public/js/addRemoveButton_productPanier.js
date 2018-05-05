@@ -19,7 +19,7 @@ $(document).ready(function () {
         }
 
         //a supprimer les param non utilises
-        $.get(Routing.generate('panier_add', {'id': idProduct, 'qte': '1'}), function (data, status) {
+        $.get(Routing.generate('panier_add', {'id': idProduct }), function (data, status) {
             afficheBtnPanier();
         });
     });

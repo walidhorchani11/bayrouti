@@ -36,4 +36,5 @@ services:
             - '@session'
             - '@doctrine.orm.entity_manager'
             - '@request'
+            - '@ecommerce.contact.email.manager'
         scope: request
