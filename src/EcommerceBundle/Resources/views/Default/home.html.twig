@@ -9,16 +9,8 @@
 {% block body %}
     <h1>home</h1>
 
-    <div><h3>a propos de notre societe</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Aliquam nulla eros, lobortis a ipsum a, auctor pellentesque leo.
-            Nulla facilisi. Vestibulum gravida aliquet nulla, sed iaculis nisi.
-            Fusce ac vestibulum ante. Cras elementum risus nec felis aliquet ornare.
-            Nunc laoreet urna quis turpis blandit, in vulputate lectus vestibulum.
-            Proin aliquam augue vitae consectetur dapibus. Phasellus at finibus justo.
-            Proin vitae quam nisl. Donec vitae dui eget lacus tincidunt blandit ut eget metus.</p>
-    </div>
+    {{ render(controller('PageBundle:Page:about')) }}
+    {{ render(controller('PageBundle:Page:offre')) }}
     {{ render(controller('EcommerceBundle:Product:product_home')) }}
     {{ render(controller('EcommerceBundle:Client:client_home')) }}
 

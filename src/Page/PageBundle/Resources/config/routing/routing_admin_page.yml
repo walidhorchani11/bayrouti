@@ -1,0 +1,24 @@
+page_admin_index:
+    path:     /
+    defaults: { _controller: "PageBundle:Page_admin:index" }
+    methods:  GET
+
+page_admin_show:
+    path:     /{id}/show
+    defaults: { _controller: "PageBundle:Page_admin:show" }
+    methods:  GET
+
+page_admin_new:
+    path:     /new
+    defaults: { _controller: "PageBundle:Page_admin:new" }
+    methods:  [GET, POST]
+
+page_admin_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PageBundle:Page_admin:edit" }
+    methods:  [GET, POST]
+
+page_admin_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PageBundle:Page_admin:delete" }
+    methods:  DELETE

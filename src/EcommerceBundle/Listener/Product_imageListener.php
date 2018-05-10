@@ -91,6 +91,8 @@ class Product_imageListener implements EventSubscriber
     public function preUpdate(PreUpdateEventArgs $args)
     {
         $entity = $args->getEntity();
+        if ($this->testEntity($entity) === false)
+            return;
 
         $this->uploadFile($entity);
 

@@ -1,0 +1,5 @@
+
+ecommerce_admin_page:
+    resource: "@PageBundle/Resources/config/routing/routing_admin_page.yml"
+    prefix: admin/page
+

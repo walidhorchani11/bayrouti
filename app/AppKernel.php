@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new contact\contactBundle\contactBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
+            new Page\PageBundle\PageBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
