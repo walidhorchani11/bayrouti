@@ -5,6 +5,16 @@
     'titre':'contact',
     'description': 'contact' } %}
 {% endblock %}
+{% block stylesheets %}
+    <style>
+        #adresse{ text-decoration: underline}
+
+        #adresse:hover{
+            cursor: pointer;
+            color: #004085;
+        }
+    </style>
+{% endblock %}
 
 {% block body %}
     {% include '@contact/Contact/include/contactInclud.html.twig' %}
@@ -19,10 +29,16 @@
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('adresse_map'), {
-                center: {lat: 36.7924567, lng: 10.1767637},
-                zoom: 8
+                center: {lat: 36.792513, lng: 10.177199},
+                zoom: 18,
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 36.792513, lng: 10.177199},
+                map: map,
+                title: 'bayrouty'
             });
         }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6vopTZyudxsWKzxwzFysSgWJZQTt9xg&callback=initMap"
             async defer></script>
