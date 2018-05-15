@@ -8,4 +8,24 @@
 
 {% block body %}
     {% include '@contact/Contact/include/contactInclud.html.twig' %}
+    {% include '@contact/Contact/include/modalAdress.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    {#
+        <script src="{{ asset('') }}"></script>
+    #}
+
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('adresse_map'), {
+                center: {lat: 36.7924567, lng: 10.1767637},
+                zoom: 8
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6vopTZyudxsWKzxwzFysSgWJZQTt9xg&callback=initMap"
+            async defer></script>
+
+
 {% endblock %}
