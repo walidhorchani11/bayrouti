@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Horchani Walid">
+
+    <title> {% block title %} Blog-Walid Horchani {% endblock %} </title>
+
+
+    {% block stylesheets %}{% endblock %}
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+{% include ':module_Used:nav_bar.html.twig' %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+<hr>
+
+<script src="//cdn.ckeditor.com/4.7.3/full/ckeditor.js"></script>
+<script src="{{ asset('jquery/jquery.min.js') }}"></script>
+{% block javascripts %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<?php
+
+namespace EcommerceBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Product
+ *
+ * @ORM\Table(name="product")
+ * @ORM\Entity(repositoryClass="EcommerceBundle\Repository\ProductRepository")
+ */
+class Product
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(name="image", type="string")
+     *
+     * @Assert\NotBlank()
+     * @Assert\File()
+     */
+    private $image;
+
+
+    /**
+     * @ORM\Column(name="image_name", type="string")
+     */
+    private $imageName;
+
+
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="EcommerceBundle\Entity\Comment", mappedBy="product", cascade={"remove"})
+     */
+    private $comments;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="price", type="float")
+     */
+    private $price;
+
+
+    /**
+     *
+     * @ORM\Column(name="nbr_comment", type="integer", nullable=true)
+     */
+    private $nbrComment;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Product
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Product
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set price
+     *
+     * @param float $price
+     * @return Product
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return float
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+    }
+
+
+    /**
+     * Add comment
+     *
+     * @param \EcommerceBundle\Entity\Comment $comment
+     * @return Product
+     */
+    public function addComment(\EcommerceBundle\Entity\Comment $comment)
+    {
+        $this->comments[] = $comment;
+        $comment->setProduct($this);
+
+        return $this;
+    }
+
+    /**
+     * Remove comment
+     *
+     * @param \EcommerceBundle\Entity\Comment $comment
+     */
+    public function removeComment(\EcommerceBundle\Entity\Comment $comment)
+    {
+        $this->comments->removeElement($comment);
+    }
+
+    /**
+     * Get comments
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * Set nbrComment
+     *
+     * @param integer $nbrComment
+     * @return Product
+     */
+    public function setNbrComment($nbrComment = null)
+    {
+        $this->nbrComment = $nbrComment;
+
+        return $this;
+    }
+
+    /**
+     * Get nbrComment
+     *
+     * @return integer
+     */
+    public function getNbrComment()
+    {
+        return $this->nbrComment;
+    }
+
+
+    public function compteTVA()
+    {
+        if ($this->price < 0) {
+            throw new \LogicException('la valeur du price ne peut pa etre nul');
+        }
+
+        if ($this->name == 'food') {
+            return $this->price * 0.001;
+        }
+
+        return $this->price * 0.5;
+
+    }
+
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Product
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+}

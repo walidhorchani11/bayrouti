@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+{% block header %}
+    {% include 'module_Used/header.html.twig' with {'url': 'image/5.jpg',
+    'titre': 'votre Panier en attente',
+    'description': 'votre Panier'} %}
+{% endblock %}
+{% block body %}
+    {% include '@Ecommerce/Panier/include/panier_affichage.html.twig' %}
+    {% include '@Ecommerce/Panier/include/modal_tel.html.twig' %}
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('bundles/ecommerce/js/panier_show.js') }}"></script>
+{% endblock %}

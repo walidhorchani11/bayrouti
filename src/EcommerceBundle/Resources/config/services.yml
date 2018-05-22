@@ -1,0 +1,40 @@
+parameters:
+    class.calcul.cout.product: EcommerceBundle\Service\CalculSomme
+    class.calcul_cout.product_twig.extension: EcommerceBundle\Service\CalculSommeExtensionTwig
+    class.image.product: EcommerceBundle\Listener\Product_imageListener
+    class.panier.manager: EcommerceBundle\Manager\PanierManager
+
+
+services:
+#    ecommerce.example:
+#        class: EcommerceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    ecommerce.cout.product.service:
+        class: '%class.calcul.cout.product%'
+        arguments: ["@session", "@doctrine.orm.entity_manager"]
+
+
+    ecommerce.cout.product_twig_extension.service:
+        class: '%class.calcul_cout.product_twig.extension%'
+        arguments: ['@ecommerce.cout.product.service']
+        tags:
+            - { name: twig.extension }
+
+
+    ecommerce.image.product:
+        class: '%class.image.product%'
+        arguments:
+            - '%brochures_directory%'
+        tags:
+            - { name: doctrine.event_subscriber, event: prePersist }
+
+
+    ecommerce.panier.manager:
+        class: '%class.panier.manager%'
+        arguments:
+            - '@session'
+            - '@doctrine.orm.entity_manager'
+            - '@request'
+            - '@ecommerce.contact.email.manager'
+        scope: request

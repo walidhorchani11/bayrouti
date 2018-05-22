@@ -1,0 +1,25 @@
+ecommerce_admin_product:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_admin_product.yml"
+    prefix:   /admin/product
+
+ecommerce_product:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_product.yml"
+    prefix: /product
+
+
+ecommerce_panier:
+   resource: "@EcommerceBundle/Resources/config/routing/routing_panier.yml"
+   prefix: /panier
+
+
+ecommerce_admin_client:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_admin_client.yml"
+    prefix:   /admin/client
+
+ecommerce_client:
+    resource: "@EcommerceBundle/Resources/config/routing/routing_client.yml"
+    prefix:   /client
+
+ecommerce_home:
+    path: /
+    defaults: { _controller: 'EcommerceBundle:Default:home' }

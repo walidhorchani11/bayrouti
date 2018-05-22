@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+
+{% block header %}
+    {% include ":module_Used:header.html.twig" with {'url': 'image/4.jpg',
+        'titre':'Contact',
+        'description': 'N\'essistez pas â nous contacter' } %}
+{% endblock %}
+{% block stylesheets %}
+    <style>
+        #adresse{ text-decoration: underline}
+
+        #adresse:hover{
+            cursor: pointer;
+            color: #004085;
+        }
+        ul i{
+            margin-right: 15px;
+        }
+    </style>
+    <style>
+        header{
+            margin-bottom: 0!important;
+        } footer{
+              margin-top: 0!important;
+          }
+    </style>
+{% endblock %}
+
+{% block body %}
+<section class="m-0 p-0">
+    <div class="container">
+        <div class="bg-white px-4 py-5">
+            {% include '@contact/Contact/include/contactInclud.html.twig' %}
+            {% include '@contact/Contact/include/modalAdress.html.twig' %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block javascripts %}
+
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('adresse_map'), {
+                center: {lat: 36.792513, lng: 10.177199},
+                zoom: 18,
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 36.792513, lng: 10.177199},
+                map: map,
+                title: 'bayrouty'
+            });
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX6vopTZyudxsWKzxwzFysSgWJZQTt9xg&callback=initMap"
+            async defer></script>
+
+
+{% endblock %}

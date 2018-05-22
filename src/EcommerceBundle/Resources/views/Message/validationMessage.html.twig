@@ -1,0 +1,38 @@
+<html>
+<body>
+<h2>validation commande</h2>
+
+<table class="table table-striped table-hover table-responsive">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Total HT</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for product in listProduct %}
+        <tr>
+            <td>
+                {{ product.name }}
+            </td>
+            <td>
+                {{ sessionPanier[product.id] }}
+
+            </td>
+            <td>
+                {{ product.price }}
+            </td>
+            <td>
+                {{ calculCout(product) }}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="pull-right text-info"> {{ 'TOTAL : ' }}{{ calculCoutPanier() }}</span></div>
+vous pouvez contactez le client par tel : {{ tel }}
+</body>
+</html>

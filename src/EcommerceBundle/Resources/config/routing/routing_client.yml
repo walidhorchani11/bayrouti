@@ -1,0 +1,3 @@
+client_list:
+    path:     /
+    defaults: { _controller: "EcommerceBundle:Client:index" }

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="bg-white px-4 py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 my-4 text-center" {% if not app.session.has('panier') %} class="d-none"{% endif %}>
+                <div id="idPanier">
+                    <a class="btn btn-outline-success" href="{{ path('panier_show') }}">
+                        Panier <i class="fa fa-shopping-basket"></i>
+                    </a>
+                </div>
+            </div>
+            {% set x = 1 %}
+            {% for product in products %}
+                {% if x % 3 == 0 %}
+                    {% set back = 'danger' %}
+                    {% set x = x+1 %}
+                {% elseif x % 3 == 1 %}
+                    {% set back = 'warning' %}
+                    {% set x = x+1 %}
+                {% elseif x % 3 == 2 %}
+                    {% set back = 'primary' %}
+                    {% set x = x+1 %}
+                {% endif %}
+                {% set rem = 0 %}
+                {#on va parcourir le tableau pour verifier si le produit existe dans le panier#}
+                {% for key, value in sessionPanier %}
+                    {#si ce produit existe dans le panier  on assigne au variable rem recoit 1#}
+                    {% if key == product.id %}
+                        {% set rem = 1 %}
+                    {% endif %}
+                {% endfor %}
+                <div class="col-10 col-sm-6 col-md-4 col-md-3">
+                    <div class="card mb-4">
+                        <div class="card-image">
+                            <img src="{{ ('uploads/brochures/'~product.image)|imagine_filter('my_thumb') }}" alt="{{ product.name }}" class="w-100 img-fluid">
+                        </div>
+                        <div class="card-header">
+                            <h3 class="text-capitalize">{{ product.name }}</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left m-0">{{ product.description }}</p>
+                            <p class="text-right m-0"><span class="badge badge-{{ back }}">{{ product.price }} DT</span></p>
+                        </div>
+                        {#<div class="text-center">#}
+                        {#si le variable rem = 1 cad que le produit existe dans le panier
+     et on va mettre un boutton pour retirer ce product#}
+                        <button class="card-footer  btn btn-{{ back }} bg-{{ back }} buttonAddDelete" value="{{ product.id }}" name="{% if rem == 1 %} delete {% else %} add {% endif %}">{% if rem == 1 %}Retirer{% else %} Ajouter {% endif %}</button>
+                        {#</div>#}
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

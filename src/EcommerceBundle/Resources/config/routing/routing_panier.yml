@@ -1,0 +1,26 @@
+panier_add:
+    path:     /add_remove
+    defaults: { _controller: "EcommerceBundle:Panier:add_remove" }
+    options:
+        expose: true
+
+panier_show:
+    path:    /show
+    defaults: { _controller: "EcommerceBundle:Panier:show" }
+
+panier_delete:
+    path:     /delete
+    defaults: { _controller: "EcommerceBundle:Panier:delete" }
+    options:
+        expose: true
+
+panier_update:
+    path:     /update
+    defaults: { _controller: "EcommerceBundle:Panier:update" }
+    options:
+        expose: true
+
+panier_valider:
+    path:     /valider
+    defaults: { _controller: "EcommerceBundle:Panier:valider" }
+
