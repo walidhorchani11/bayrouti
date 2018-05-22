@@ -1,5 +1,11 @@
-
+<div class="container">
 {% if page is not null %}
-    <hr>
-    {{ page.content|raw }}
+    <h2 class="mb-5 text-center">Nos offres</h2>
+    <div class="row justify-content-center">
+        <div class="col-sm-8 bg-danger-faded p-4">
+            {{ page.content|raw }}
+        </div>
+    </div>
 {% endif %}
+</div>
+

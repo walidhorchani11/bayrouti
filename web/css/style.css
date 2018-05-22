@@ -1,0 +1,76 @@
+body {
+    overflow-x: hidden;
+    background: #fff7d8;
+    font-family: sans-serif;
+}
+button:hover{
+    cursor: pointer;
+}
+section{
+    padding: 75px 0;
+    margin: 0!important;
+}
+.clients .client {
+    position: relative;
+    margin-bottom: 25px;
+}
+.clients .client img{
+    filter: grayscale(0);
+    transition: all .3s ease-in;
+}
+.clients .client:hover img{
+    filter: grayscale(1);
+}
+
+.text-danger{
+    color: #e1001e;
+}
+.text-success{
+    color: #028e35;
+}
+.text-yellow{
+    color: #f9d249;
+}
+.bg-danger{
+    background-color: #e1001e!important;;
+    color: #fff;
+}
+.bg-success{
+    background-color: #028e35!important;;
+    color: #fff;
+}
+.bg-yellow{
+    background-color: #f9d249!important;
+    color: #fff;
+}
+.bg-danger-faded{
+    background-color: rgba(225, 0, 30, .6) !important;;
+    color: #fff;
+}
+.bg-success-faded{
+    background-color: rgba(2, 142, 53, .6) !important;;
+    color: #fff;
+}
+.bg-yellow-faded{
+    background-color: rgba(249, 210, 73, .6) !important;
+    color: #fff;
+}
+header img {
+    position: absolute;
+    top: 120px;
+    width: 100px;
+    left: -30px;
+}
+footer {
+    padding: 15px;
+    margin-top: 25px;
+    border-top: 1px solid #dddddd;
+    background: #fff;
+}
+@media (max-width: 767px) {
+    header img {
+        top: 80px;
+        width: 80px;
+        left: 0;
+    }
+}

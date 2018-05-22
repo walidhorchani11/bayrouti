@@ -2,8 +2,8 @@
 
 {% block header %}
     {% include ":module_Used:header.html.twig" with {'url': 'image/4.jpg',
-    'titre':'contact',
-    'description': 'contact' } %}
+        'titre':'Contact',
+        'description': 'N\'hesitez pas â nous contacter' } %}
 {% endblock %}
 {% block stylesheets %}
     <style>
@@ -13,17 +13,33 @@
             cursor: pointer;
             color: #004085;
         }
+
+        ul i{
+            margin-right: 15px;
+        }
+    </style>
+    <style>
+        header{
+            margin-bottom: 0!important;
+        } footer{
+              margin-top: 0!important;
+          }
+
     </style>
 {% endblock %}
 
 {% block body %}
-    {% include '@contact/Contact/include/contactInclud.html.twig' %}
-    {% include '@contact/Contact/include/modalAdress.html.twig' %}
+
+<section class="m-0 p-0">
+    <div class="container">
+        <div class="bg-white px-4 py-5">
+            {% include '@contact/Contact/include/contactInclud.html.twig' %}
+            {% include '@contact/Contact/include/modalAdress.html.twig' %}
+        </div>
+    </div>
+</section>
 {% endblock %}
 {% block javascripts %}
-    {#
-        <script src="{{ asset('') }}"></script>
-    #}
 
     <script>
         var map;

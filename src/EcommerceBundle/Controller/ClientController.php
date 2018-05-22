@@ -23,7 +23,7 @@ class ClientController extends Controller
 
         $clients = $em->getRepository('EcommerceBundle:Client')->findAll();
 
-        return $this->render('@Ecommerce/client/index.html.twig', array(
+        return $this->render('EcommerceBundle:Client:index.html.twig', array(
             'clients' => $clients,
         ));
     }
@@ -31,10 +31,9 @@ class ClientController extends Controller
     public function client_homeAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $clients = $em->getRepository('EcommerceBundle:Client')->findBy(array(),null,3,0);
+        $clients = $em->getRepository('EcommerceBundle:Client')->findBy(array(),array('id'=>'DESC'),4,0);
 
         return $this->render('EcommerceBundle:Client:client_home.html.twig', array('clients' => $clients));
     }
-
 
 }

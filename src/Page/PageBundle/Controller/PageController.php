@@ -22,7 +22,7 @@ class PageController extends Controller
 
         $page = $this->getDoctrine()->getRepository('PageBundle:Page')->findOneBy(array('title'=>'about'));
 
-        return $this->render('@Page/Page/about.html.twig', array(
+        return $this->render('PageBundle:Page:about.html.twig', array(
             'page' => $page
         ));
     }
@@ -36,7 +36,7 @@ class PageController extends Controller
 
         $page = $this->getDoctrine()->getRepository('PageBundle:Page')->findOneBy(array('title'=>'offre'));
 
-        return $this->render('@Page/Page/offre.html.twig', array(
+        return $this->render('PageBundle:Page:offre.html.twig', array(
             'page' => $page
         ));
     }

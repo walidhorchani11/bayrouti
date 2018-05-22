@@ -1,25 +1,48 @@
 {% extends 'base.html.twig' %}
 {% block header %}
     {% include ":module_Used:header.html.twig"
-    with {'url':  'image/5.jpg',
-    'titre':'nos client',
-    'description': 'client'
+        with {'url':  'image/5.jpg',
+        'titre':'Nos client',
+        'description': 'Qui nous fait confience'
     } %}
 {% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+<style>
+    header{
+        margin-bottom: 0!important;
+    } footer{
+        margin-top: 0!important;
+    }
+</style>
+{% endblock %}
 {% block body %}
-    <h1>Clients list</h1>
+    <section class="m-0 p-0">
+        <div class="container">
+           <div class="bg-white px-4 py-5">
+               <h2 class="text-center my-5">Clients list</h2>
 
-    {% for client in clients %}
-        <div class="row">
-            <div class="col-sm-6">
-                {{ client.name }}
-            </div>
-            <div class="col-sm-6">
-                <img src="{{ asset('uploads/brochures/')~client.image }}" class=" img-responsive">
-            </div>
+               <div class="row">
+                   {% for client in clients %}
+                       <div class="col-sm-3">
+                           <div class="thumbnail border rounded bg-white">
+                               <img src="{{ asset('uploads/brochures/')~client.image }}" class="img-fluid">
+                               <p class="m-0 p-3 bg-yellow">{{ client.name }}</p>
+                           </div>
+                       </div>
+                   {% endfor %}
+               </div>
+           </div>
         </div>
-        {% if not loop.last %}
-            <hr>
-        {% endif %}
-    {% endfor %}
+    </section>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var h=0;
+        $('.thumbnail img').each(function () {
+            h = h<$(this).height()?$(this).height():h;
+        });$('.thumbnail img').height(h);
+    </script>
+
 {% endblock %}

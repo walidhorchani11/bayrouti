@@ -20,10 +20,11 @@ class ClientAdminController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $clients = $em->getRepository('EcommerceBundle:Client')->findAll();
 
-        return $this->render('clientAdmin/index.html.twig', array(
+
+        return $this->render('EcommerceBundle:ClientAdmin:index.html.twig', array(
+
             'clients' => $clients,
         ));
     }
@@ -46,7 +47,7 @@ class ClientAdminController extends Controller
             return $this->redirectToRoute('admin_client_show', array('id' => $client->getId()));
         }
 
-        return $this->render('clientAdmin/new.html.twig', array(
+        return $this->render('EcommerceBundle:ClientAdmin:new.html.twig', array(
             'client' => $client,
             'form' => $form->createView(),
         ));
@@ -60,7 +61,8 @@ class ClientAdminController extends Controller
     {
         $deleteForm = $this->createDeleteForm($client);
 
-        return $this->render('clientAdmin/show.html.twig', array(
+
+        return $this->render('EcommerceBundle:ClientAdmin:show.html.twig', array(
             'client' => $client,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -86,7 +88,7 @@ class ClientAdminController extends Controller
             return $this->redirectToRoute('admin_client_edit', array('id' => $client->getId()));
         }
 
-        return $this->render('clientAdmin/edit.html.twig', array(
+        return $this->render('EcommerceBundle:ClientAdmin:edit.html.twig', array(
             'client' => $client,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

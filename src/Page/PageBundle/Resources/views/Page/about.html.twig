@@ -1,2 +1,12 @@
 
-{{ page.content|raw }}
+<h2 class="text-center">&Acirc; propos de nous</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3 text-center">
+            <img src="{{ asset('image/logo.png') }}" alt="logo" class="img-fluid mb-4 mb-sm-0">
+        </div>
+        <div class="col-sm-9">
+            <div class="py-5">{{ page.content|raw }}</div>
+        </div>
+    </div>
+</div>

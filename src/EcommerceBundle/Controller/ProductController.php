@@ -18,8 +18,8 @@ class ProductController extends Controller
     public function product_homeAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('EcommerceBundle:Product')->findBy(array(),null,3,0);
 
+        $products = $em->getRepository('EcommerceBundle:Product')->findBy(array(),array("id"=>"DESC"),4,0);
         return $this->render('EcommerceBundle:Product:product_home.html.twig', array('products' => $products));
     }
 
