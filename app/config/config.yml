@@ -40,7 +40,11 @@ twig:
     form_themes:
         - 'Form/fields.html.twig'
     #    - 'bootstrap_3_layout.html.twig'
-
+    globals:
+        Email: '%contact_mailer%'
+        tel: +216 21 545 051
+        adresse: Beb al Jazira
+        fb: www.facebook.com
 
 # Doctrine Configuration
 doctrine:

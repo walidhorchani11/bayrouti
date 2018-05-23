@@ -1,6 +1,6 @@
 body {
     overflow-x: hidden;
-    background: #fff7d8;
+    background: #F5F5F5;
     font-family: sans-serif;
 }
 button:hover{
@@ -13,6 +13,8 @@ section{
 .clients .client {
     position: relative;
     margin-bottom: 25px;
+    box-shadow: 9px 9px 27px grey;
+    padding-right: 30px;
 }
 .clients .client img{
     filter: grayscale(0);
@@ -43,23 +45,17 @@ section{
     background-color: #f9d249!important;
     color: #fff;
 }
-.bg-danger-faded{
-    background-color: rgba(225, 0, 30, .6) !important;;
-    color: #fff;
-}
+
 .bg-success-faded{
-    background-color: rgba(2, 142, 53, .6) !important;;
     color: #fff;
 }
 .bg-yellow-faded{
-    background-color: rgba(249, 210, 73, .6) !important;
     color: #fff;
 }
 header img {
     position: absolute;
-    top: 120px;
     width: 100px;
-    left: -30px;
+    left: -150px;
 }
 footer {
     padding: 15px;

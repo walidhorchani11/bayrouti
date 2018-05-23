@@ -16,7 +16,7 @@ class Contact
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min = 30, minMessage="The content is very short")
+     * @Assert\Length(min = 5, minMessage="The content is very short")
      */
     private $reclamation;
 

@@ -1,22 +1,26 @@
 {% extends 'base.html.twig' %}
 {% block header %}
     {% include ":module_Used:header.html.twig"
-    with {'url': 'image/1.jpg',
+    with {'url': 'image/2.jpg',
     'titre':'Bienvenue',
     'description': 'La meilleur goût est notre specialité'
     } %}
 {% endblock %}
 {% block body %}
-    <section style="border-bottom: 1px solid #e7e7e7">
-        {{ render(controller('PageBundle:Page:about')) }}
-    </section>
-    <section style="background: url('{{ asset('media/cache/header_img/image/1.jpg') }}') rgba(255, 255, 255, .4) no-repeat fixed center;background-size: cover;background-blend-mode: color;">
+    <div class="container">
+        <section style="border-bottom: 1px solid #e7e7e7">
+            {{ render(controller('PageBundle:Page:about')) }}
+        </section>
+    </div>
+    <section
+            style="background: url({{ 'image/5.jpg'|imagine_filter('header_img') }}) rgba(255, 255, 255, .4) no-repeat fixed center;background-size: cover;background-blend-mode: color;">
         {{ render(controller('PageBundle:Page:offre')) }}
     </section>
     <section>
         {{ render(controller('EcommerceBundle:Product:product_home')) }}
     </section>
-    <section class="p-0"  style="background: url('{{ asset('media/cache/header_img/image/3.jpg') }}') rgba(255, 255, 255, .2) no-repeat fixed center;background-size: cover;background-blend-mode: color;">
+    <section class="p-0"
+             style="background: url({{ 'image/3.jpg'|imagine_filter('header_img') }}) rgba(255, 255, 255, .2) no-repeat fixed center;background-size: cover;background-blend-mode: color;">
         {{ render(controller('EcommerceBundle:Client:client_home')) }}
     </section>
 {% endblock %}
