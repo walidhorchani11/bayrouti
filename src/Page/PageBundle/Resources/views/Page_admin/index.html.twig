@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('page_admin_show', { 'id': page.id }) }}">{{ page.id }}</a></td>
                 <td>{{ page.title }}</td>
-                <td>{{ page.content }}</td>
+                <td>{{ page.content|raw }}</td>
                 <td>{% if page.date %}{{ page.date|date('Y-m-d') }}{% endif %}</td>
                 <td>
                     <ul>

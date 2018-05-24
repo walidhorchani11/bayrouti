@@ -1,18 +1,44 @@
-<footer>
+<footer style="background: url({{ 'image/footer.jpg'|imagine_filter('header_img') }})  fixed no-repeat;background-size: cover" >
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="col-lg-6 col-md-10 mx-auto">
                 <ul class="list-inline text-center">
                     <li class="list-inline-item">
-                        <a href="#">
+                        <a href="{{ fb }}">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                   </span>
                         </a>
                     </li>
+
+
+                    <li class="list-inline-item">
+                        <a href="{{ Parallax_Soft }}">
+                  <span class="fa-stack fa-lg">
+                    <img src="{{ 'image/parallax_logo.png'|imagine_filter('header_img') }}" style="width: 100px">
+                  </span>
+                        </a>
+                    </li>
+
+
+
+
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; W.H {{ "now"|date('Y') }}</p>
+            </div>
+            <div class="col-lg-6 ">
+                <ul class="list-unstyled">
+                    <li id="adresse"><i class="fa fa-fw fa-map"></i>
+                        <a data-toggle="modal" data-target="#modal-adresse">Adresse: {{ adresse }}</a></li>
+                    <li><i class="fa fa-fw fa-phone"></i> Tel: {{ tel }}</li>
+                    <li><i class="fa fa-fw fa-envelope"></i> Email: {{ Email }}</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12 col-md-10 mx-auto">
+                <span class="copyright" style="color: #009136">Copyright &copy; Parallax soft {{ "now"|date('Y') }}</span>
             </div>
         </div>
     </div>

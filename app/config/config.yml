@@ -44,7 +44,8 @@ twig:
         Email: '%contact_mailer%'
         tel: +216 21 545 051
         adresse: Beb al Jazira
-        fb: www.facebook.com
+        fb: https://www.facebook.com/
+        Parallax_Soft: https://parallaxsoft.tn/
 
 # Doctrine Configuration
 doctrine:
