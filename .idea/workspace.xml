@@ -2,38 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96e8ba-b441-4cfb-a5ad-06de237a955d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\app\Resources\views\base.html.~twig" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\src\EcommerceBundle\Resources\public\js\modalAdresse.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\594e453.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\594e453_bootstrap.min_3.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\594e453_clean-blog.min_1.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\594e453_font-awesome.min_2.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\e91d138.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\e91d138_bootstrap.min_3.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\e91d138_clean-blog.min_1.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\css\e91d138_font-awesome.min_2.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\7875da2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\7875da2_bootstrap.min_2.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\7875da2_clean-blog.min_1.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\7875da2_jquery.min_4.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\7875da2_popper.min_3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\contact_me.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\wamp\www\bayrouti\web\js\jqBootstrapValidation.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/contact/contactBundle/Controller/ContactController.php" afterPath="$PROJECT_DIR$/src/contact/contactBundle/Controller/ContactController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/atelier3.iml" afterPath="$PROJECT_DIR$/.idea/atelier3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/module_Used/footer.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/module_Used/footer.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/include/listProduct.html.twig" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Product/include/listProduct.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/public/js/panier_show.js" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/public/js/panier_show.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Panier/show.html.twig" afterPath="$PROJECT_DIR$/src/EcommerceBundle/Resources/views/Panier/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deploy.php" afterPath="$PROJECT_DIR$/deploy.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="atelier3.iws" />
@@ -65,7 +34,7 @@
       <file leaf-file-name="ContactController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contact/contactBundle/Controller/ContactController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
@@ -75,7 +44,7 @@
       <file leaf-file-name="contact.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contact/contactBundle/Resources/views/Contact/contact.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.8">
+            <state vertical-scroll-proportion="0.0">
               <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
               <folding />
             </state>
@@ -85,12 +54,9 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.7118645">
+            <state vertical-scroll-proportion="0.0">
               <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-              <folding>
-                <element signature="e#1321#1351#0#Twig" expanded="true" />
-                <element signature="e#2078#2095#0#Twig" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +64,7 @@
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.101695">
+            <state vertical-scroll-proportion="0.0">
               <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
               <folding />
             </state>
@@ -108,8 +74,8 @@
       <file leaf-file-name="deploy.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53513515">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.9267734">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -400,14 +366,14 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1633888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16565809" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23298033" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4649266" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19381107" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -637,20 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sh.exe.stackdump">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssh.exe.stackdump">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6666666">
@@ -765,10 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="e#1025#1068#0#PHP" expanded="false" />
-            <element signature="e#1353#1401#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,7 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,7 +731,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3135135">
           <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,13 +753,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33269963">
           <caret line="26" column="54" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contact/contactBundle/Controller/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.4">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
@@ -822,7 +766,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contact/contactBundle/Resources/views/Contact/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.8">
+        <state vertical-scroll-proportion="0.0">
           <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding />
         </state>
@@ -854,12 +798,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.7118645">
+        <state vertical-scroll-proportion="0.0">
           <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-          <folding>
-            <element signature="e#1321#1351#0#Twig" expanded="true" />
-            <element signature="e#2078#2095#0#Twig" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -889,16 +830,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.101695">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sh.exe.stackdump">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ssh.exe.stackdump">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53513515">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.9267734">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>

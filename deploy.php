@@ -9,10 +9,10 @@ require 'recipe/symfony.php';
  * On indique le répertoire où doit être déployé le projet. */
 host('http://bayrouti.parallaxsoft.tn')
     ->stage('prod')
-    ->env('deploy_path', '/www/');
+    ->env('deploy_path', '/www/_dev/bayrouti/');
 
 /* On utilise Git pour récupérer le projet : on indique l'URL du dépôt du projet */
-set('repository', 'git+ssh://user@mon-domaine.fr/mon-projet.git');
+set('repository', 'git@github.com:walidhorchani11/bayrouti.git');
 
 /* Ce qui vient par la suite est optionnel. Il existe plein de variables personnalisables (Cf documentation).
  * Ici, cela permet de demander à Deployer de ne pas utiliser la commande sudo pour changer les droits des fichiers.
