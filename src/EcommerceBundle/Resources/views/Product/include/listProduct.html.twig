@@ -1,46 +1,4 @@
-{#<<<<<<< HEAD
-{% for product in products %}
-    <div class="row">
 
-        <div class="col-sm-6">
-            <img src="{{ ('uploads/brochures/'~product.image)|imagine_filter('my_thumb') }}" alt="{{ product.name }}"
-                 class=" img-responsive">
-        </div>
-
-        <div class="col-sm-6">
-            <h2>{{ product.name }}</h2>
-
-            <p>{{ product.description }}</p>
-            {{ product.price }}<br>
-
-            {% set rem = 0 %}
-
-            &#123;&#35;on va parcourir le tableau pour verifier si le produit existe dans le panier&#35;&#125;
-            {% for key, value in sessionPanier %}
-                &#123;&#35;si ce produit existe dans le panier  on assigne au variable rem recoit 1&#35;&#125;
-                {% if key == product.id %}
-                    {% set rem = 1 %}
-                {% endif %}
-
-            {% endfor %}
-
-            &#123;&#35;si le variable rem = 1 cad que le produit existe dans le panier
-             et on va mettre un boutton pour retirer ce product&#35;&#125;
-            <button class="btn btn-default buttonAddDelete" value="{{ product.id }}"
-                    name= {% if rem == 1 %} "delete" {% else %} "add" {% endif %}>
-            {% if rem == 1 %}Retirer{% else %} Ajouter {% endif %}</button>
-        </div>
-    </div>
-    <hr>
-{% endfor %}
-<br>
-<div id="idPanier" {% if not app.session.has('panier') %} style="display: none" {% endif %}>
-
-    <a href="{{ path('panier_show') }}">
-        <button class="btn btn-outline-success ">Panier</button>
-    </a>
-</div>
-=======#}
 <div class="container">
     <div class="bg-white px-4 py-5">
         <div class="row justify-content-center">

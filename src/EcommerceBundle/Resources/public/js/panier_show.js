@@ -39,7 +39,7 @@ $(document).ready(function () {
             //if panier empty then delete button valider panier
             if (tr_tbody == 0) {
                 $(".validation").remove();
-                var noeud_tr = "<tr> <td colspan=" + "5>" + "<span>votre panier est vide</span></td></tr>"
+                var noeud_tr = "<tr> <td colspan=" + "5>" + "<span>votre panier est vide</span></td></tr>";
                 $("tbody").append(noeud_tr);
             }
 

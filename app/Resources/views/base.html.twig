@@ -10,20 +10,20 @@
     <script src="{{ asset('jquery/jquery-3.3.1.js') }}"></script>
     <link rel="icon"  href="{{ asset('apple-icon-76x76.png') }}">
 
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+{#    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
           type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
-          rel='stylesheet' type='text/css'>
+          rel='stylesheet' type='text/css'>#}
 
-    {% stylesheets filter='cssrewrite, ?scssphp'
-    'bootstrap/css/bootstrap.min.css'
-    'font-awesome/css/font-awesome.min.css'
-    'css/clean-blog.min.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+    <link href='{{ asset('font-awesome/css/font-awesome.min.css') }}' rel='stylesheet'>
 
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css"/>
+    {# <link href='{{ asset('bootstrap/css/bootstrap.min.css') }}' rel='stylesheet'>
+     <link href='{{ asset('css/clean-blog.min.css') }}' rel='stylesheet'>
+     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />#}
 
-    {% endstylesheets %}
+{#fichier generer grace a grunt #}
+    <link href='{{ asset('css/min.css') }}' rel='stylesheet'>
+
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -42,16 +42,12 @@
 {% include ':module_Used:footer.html.twig' %}
 {#<script src="{{ asset('jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('popper/popper.min.js') }}"></script>
-<script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/clean-blog.min.js') }}"></script>#}
-<!-- Custom scripts a tous-->
-{% javascripts filter='?jsqueeze'
-'jquery/jquery.min.js'
-'popper/popper.min.js'
-'js/clean-blog.min.js'
-'bootstrap/js/bootstrap.min.js' %}
-<script type="text/javascript" src="{{ asset_url }}"></script>
-{% endjavascripts %}
+<script src="{{ asset('js/clean-blog.min.js') }}"></script>
+<script src=" {{ asset('bootstrap/js/bootstrap.min.js') }}"></script>#}
+
+{#fichier js generer par grunt concatenation de tous les fichier js necessaire#}
+<script src=" {{ asset('js/may_uglify.js') }}"></script>
+
 <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
 {% block javascripts %}{% endblock %}

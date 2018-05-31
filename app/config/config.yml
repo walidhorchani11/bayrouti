@@ -81,15 +81,15 @@ swiftmailer:
             allow_self_signed: true
             verify_peer: false
 
-assetic:
-    debug:          '%kernel.debug%'
-    use_controller: '%kernel.debug%'
-    filters:
-        cssrewrite: ~
-        jsqueeze:   ~
-        scssphp:
-            formatter: 'Leafo\ScssPhp\Formatter\Compressed'
-
+#assetic:
+#    debug:          '%kernel.debug%'
+#    use_controller: '%kernel.debug%'
+#    filters:
+#        cssrewrite: ~
+#        jsqueeze:   ~
+#        scssphp:
+#            formatter: 'Leafo\ScssPhp\Formatter\Compressed'
+#
 
 liip_imagine:
     resolvers:

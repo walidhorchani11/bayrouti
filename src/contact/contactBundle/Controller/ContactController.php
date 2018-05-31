@@ -4,7 +4,6 @@ namespace contact\contactBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-
 class ContactController extends Controller
 {
     public function contactAction()
@@ -15,7 +14,9 @@ class ContactController extends Controller
         $form = $contactHandle->getForm();
 
         if ($contactHandle->process()) {
+
             return $this->redirectToRoute('contact_homepage');
+
 
         }
 
