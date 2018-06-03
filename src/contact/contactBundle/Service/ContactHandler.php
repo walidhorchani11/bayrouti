@@ -40,14 +40,12 @@ class ContactHandler
         }
     }
 
-
     protected function onSuccess()
     {
 
         $this->mail->emailContact($this->form->getData());
         $this->session->getFlashBag()->add('info', 'votre msg a ete envoye avec success');
-        //session
-        //envoi msg
+
     }
 
 }

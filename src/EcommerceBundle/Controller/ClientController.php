@@ -33,7 +33,7 @@ class ClientController extends Controller
         $em = $this->getDoctrine()->getManager();
         $clients = $em->getRepository('EcommerceBundle:Client')->findBy(array(),array('id'=>'DESC'),4,0);
 
-        return $this->render('EcommerceBundle:Client:client_home.html.twig', array('clients' => $clients));
+        return $this->render('@Ecommerce/Client/client_home.html.twig', array('clients' => $clients));
     }
 
 }
