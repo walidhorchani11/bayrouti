@@ -15,3 +15,14 @@ fos_js_routing:
 
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.yaml"
+
+login:
+    path: /login
+    defaults:
+        _controller: EcommerceBundle:Security:login
+
+login_check:
+    path: /admin/login_check
+
+logout:
+    path: /admin/logout
